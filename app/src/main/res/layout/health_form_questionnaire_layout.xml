@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/health_form_layout_border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/health_form_first_question_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_first_question_layout_buttons_layoutButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_first_question_layout_buttons_layoutButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/health_form_layout_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_second_question_main_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_choose_an_option"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_second_question_rest_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:orientation="horizontal">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_second_question_layout_buttons_layoutRestOptionButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_second_question_layout_buttons_layoutRestOptionButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_second_question_activity_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:orientation="horizontal">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_second_question_layout_buttons_layoutDailyOptionButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_second_question_layout_buttons_layoutDailyOptionButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_second_question_exercise_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"
+            android:orientation="horizontal">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_second_question_layout_buttons_layoutExerciseOptionButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_second_question_layout_buttons_layoutExerciseOptionButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/health_form_layout_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/health_form_in_the_last_year_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_choose_an_option"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_short_of_breath_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_third_question_layout_buttons_layoutButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_third_question_layout_buttons_layoutButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/health_form_layout_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/health_form_fourth_question_main_question"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_choose_an_option"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_fourth_question_heart_disease_option"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_fourth_question_layout_buttons_layoutHeartDiseaseOptionButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_fourth_question_layout_buttons_layoutHeartDiseaseOptionButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/health_form_fourth_question_sudden_death_option"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_fourth_question_layout_buttons_layoutSuddenDeathOptionButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_fourth_question_layout_buttons_layoutSuddenDeathOptionButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/health_form_layout_border">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/health_form_fifth_question"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_fifth_question_layout_buttons_layoutButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_fifth_question_layout_buttons_layoutButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/health_form_layout_border">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_form_sixth_question"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_sixth_question_layout_buttons_layoutButtonNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/no_button"
+                android:textColor="@color/colorWhite" />
+
+            <com.traker.traker.components.TrakerButton
+                android:id="@+id/health_form_scroll_view_sixth_question_layout_buttons_layoutButtonYES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/traker_button_border"
+                android:text="@string/yes_button"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+</LinearLayout>
+</LinearLayout>

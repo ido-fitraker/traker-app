@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBlack"
+    android:layout_gravity="center"
+    android:paddingBottom="40dp"
+    app:layout_constraintBottom_toBottomOf="@id/my_goals_continue_button"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/my_goals_goals_explanation">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/my_goals_table_layout_first_row_build_muscles_layout"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/build_goal_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_goals_build_muscles_goal"
+                android:textColor="@color/colorWhite" />
+        </com.traker.traker.components.TrakerLinearLayout>
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/my_goals_table_layout_first_row_weight_loss_layout"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/weight_goal_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_Goals_weight_loss_goal"
+                android:textColor="@color/colorWhite" />
+
+        </com.traker.traker.components.TrakerLinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/my_goals_table_layout_second_row_peaceful_life_layout"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/peaceful_life_goal_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_goals_peaceful_goal"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+        </com.traker.traker.components.TrakerLinearLayout>
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/my_goals_table_layout_second_row_stamina_layout"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart_goal_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_goals_stamina_goal"
+                android:textColor="@color/colorWhite" />
+        </com.traker.traker.components.TrakerLinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/my_goals_table_layout_third_row_general_goal_layout"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/general_goal_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_goals_general_goal"
+                android:textColor="@color/colorWhite" />
+        </com.traker.traker.components.TrakerLinearLayout>
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/my_goals_table_layout_third_row_military_goal_layout"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/military_preparation_goal_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_goals_military_goal"
+                android:textColor="@color/colorWhite" />
+        </com.traker.traker.components.TrakerLinearLayout>
+    </TableRow>
+</TableLayout>

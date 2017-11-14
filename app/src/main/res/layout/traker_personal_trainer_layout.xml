@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/colorBlack">
+
+    <ImageView
+        android:id="@+id/traker_personal_trainer_layour_trainer_image"
+        android:layout_width="67dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/traker_personal_trainer_layour_trainer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@+id/traker_personal_trainer_layour_trainer_image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/traker_personal_trainer_layour_trainer_experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="16dp"
+
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/traker_personal_trainer_layour_trainer_image"
+        app:layout_constraintTop_toBottomOf="@+id/traker_personal_trainer_layour_trainer_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/traker_personal_trainer_layour_trainer_rating_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintLeft_toRightOf="@+id/traker_personal_trainer_layour_trainer_choose_button"
+        app:layout_constraintRight_toLeftOf="@+id/traker_personal_trainer_layour_trainer_name"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+             />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="3dp"
+            android:paddingRight="3dp"
+             />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/traker_personal_trainer_layour_trainer_choose_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/black"
+        android:src="@drawable/back_screen_button_arrow_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/traker_personal_trainer_layour_trainer_rating_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/traker_personal_trainer_layour_trainer_rating_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</android.support.constraint.ConstraintLayout>

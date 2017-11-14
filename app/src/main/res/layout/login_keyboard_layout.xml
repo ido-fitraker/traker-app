@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="3"
+    android:gravity="center"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintVertical_bias="1.0"
+    tools:layout_editor_absoluteY="222dp">
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonOne"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_one"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/codeButtonTwo"
+            tools:layout_editor_absoluteY="200dp" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonTwo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_two"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/codeButtonOne"
+            app:layout_constraintLeft_toRightOf="@id/codeButtonOne"
+            app:layout_constraintRight_toLeftOf="@+id/codeButtonThree" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonThree"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_three"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/codeButtonTwo"
+            app:layout_constraintLeft_toRightOf="@id/codeButtonTwo"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonFour"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_four"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="274dp" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonFive"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_five"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="274dp" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonSix"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_six"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="259dp"
+            tools:layout_editor_absoluteY="274dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonSeven"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_seven"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonEight"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_eight"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="365dp" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonNine"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/number_nine"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/codeButtonEight"
+            app:layout_constraintLeft_toRightOf="@id/codeButtonEight"
+            app:layout_constraintRight_toRightOf="parent" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeVerificationNextButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:clickable="false"
+            android:text="@string/ok_button"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeButtonZero"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_black"
+            android:text="@string/zero_number"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="442dp" />
+
+        <com.traker.traker.components.TrakerButton
+            android:id="@+id/codeArrowBackButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_button_arrow_back"
+            android:text="back"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/codeButtonZero"
+            app:layout_constraintLeft_toRightOf="@id/codeButtonZero"
+            app:layout_constraintRight_toRightOf="parent" />
+    </TableRow>
+</TableLayout>
