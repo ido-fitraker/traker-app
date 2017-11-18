@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -22,7 +23,8 @@
             android:focusable="true"
             android:gravity="center_vertical"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -53,7 +55,8 @@
             android:textColor="@color/colorWhite"
             android:textSize="18sp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/trainer_choosing_traker_title"
@@ -89,14 +92,18 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trainer_choosing_traker_title" />
+            app:layout_constraintTop_toBottomOf="@+id/trainer_choosing_traker_title"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <com.traker.traker.components.TrakerLinearLayout
             android:id="@+id/trainer_choosing_chosen_goal_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:gravity="center"
             android:orientation="horizontal"
@@ -105,7 +112,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/trainer_choosing_screen_title">
+            app:layout_constraintTop_toBottomOf="@+id/trainer_choosing_screen_title"
+            app:layout_constraintBottom_toTopOf="@+id/trainer_choosing_personal_trainers_list_layout"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:id="@+id/trainer_choosing_chosen_goal_layout_goal_text"
@@ -124,19 +133,18 @@
 
         </com.traker.traker.components.TrakerLinearLayout>
 
-        <com.traker.traker.components.TrakerLinearLayout
+        <LinearLayout
             android:id="@+id/trainer_choosing_personal_trainers_list_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trainer_choosing_chosen_goal_layout"
-            android:layout_marginRight="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginLeft="0dp"
-            app:layout_constraintLeft_toLeftOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trainer_choosing_chosen_goal_layout">
 
-        </com.traker.traker.components.TrakerLinearLayout>
+        </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

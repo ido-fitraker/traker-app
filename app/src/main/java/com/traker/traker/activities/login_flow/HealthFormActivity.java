@@ -45,7 +45,6 @@ public class HealthFormActivity extends AppCompatActivity {
         mContinueButton = (TrakerButton)findViewById(R.id.health_form_continue_button);
         mQuestionnaire =
                 (HealthFormQuestionnaireLayout) findViewById(R.id.health_form_scroll_view_main_layout);
-//        TextView backView = (TextView)findViewById(R.id)
         TrakerLog.d(TrakerLog.getCause()+" binded views.");
     }
 
@@ -80,8 +79,6 @@ public class HealthFormActivity extends AppCompatActivity {
 
     private void appendBoolean(TrakerButton button, LinearLayout layout) {
         HashMap map = mQuestionnaire.getmSelectedButtons();
-//        int buttonId = button.getParent();
-//        ViewParent l = button.getParent();
         if(map.containsKey(layout.getId())){
             map.remove(layout);
         }

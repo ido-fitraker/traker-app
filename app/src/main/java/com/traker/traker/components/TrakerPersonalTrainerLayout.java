@@ -1,7 +1,6 @@
 package com.traker.traker.components;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -13,9 +12,6 @@ import android.widget.TextView;
 
 import com.traker.traker.R;
 import com.traker.traker.beans.professionals.PersonalTrainer;
-import com.traker.traker.util.loggers.TrakerLog;
-
-import java.util.ArrayList;
 
 /**
  * Created by idoroiengel on 11/12/17.
@@ -31,21 +27,25 @@ public class TrakerPersonalTrainerLayout extends CustomTrakerLayout {
     private ImageButton trainerChoosingButton;
 
     // data
-    private static PersonalTrainer trainer = new PersonalTrainer();
+    private PersonalTrainer trainer;
+
+    private TrakerPersonalTrainerLayoutInterface trakerPersonalTrainerLayoutInterface;
 
     public TrakerPersonalTrainerLayout(Context context) {
         this(context, null);
     }
 
-
     public TrakerPersonalTrainerLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.traker_personal_trainer_layout, this, true);
+//        LayoutInflater.from(context).inflate(getmLayoutOrientation().getId(), this, true);
         bindViews();
         initViews();
-        dumpTrainerDetails(trainer);
-
     }
+//    public TrakerPersonalTrainerLayout(){
+//        LayoutInflater.from(getContext()).inflate(getmLayoutOrientation().getId(), this, true);
+//    }
+
 
     public PersonalTrainer getTrainer() {
         return trainer;
@@ -53,21 +53,28 @@ public class TrakerPersonalTrainerLayout extends CustomTrakerLayout {
 
     public void setTrainer(PersonalTrainer trainer) {
         this.trainer = trainer;
+        dumpTrainerDetails(trainer);
+    }
+
+    public void setTrakerPersonalTrainerLayoutInterface(TrakerPersonalTrainerLayoutInterface
+                                                                trakerPersonalTrainerLayoutInterface) {
+        this.trakerPersonalTrainerLayoutInterface = trakerPersonalTrainerLayoutInterface;
     }
 
     private void bindViews(){
-        trainerImage = findViewById(R.id.traker_personal_trainer_layour_trainer_image);
-        trainerName = findViewById(R.id.traker_personal_trainer_layour_trainer_name);
-        trainerExperience = findViewById(R.id.traker_personal_trainer_layour_trainer_experience);
-        trainerRating = findViewById(R.id.traker_personal_trainer_layour_trainer_rating_layout);
-        trainerChoosingButton = findViewById(R.id.traker_personal_trainer_layour_trainer_choose_button);
+        trainerImage = findViewById(R.id.traker_personal_trainer_layout_trainer_image);
+        trainerName = findViewById(R.id.traker_personal_trainer_layout_trainer_name);
+        trainerExperience = findViewById(R.id.traker_personal_trainer_layout_trainer_practical_experience);
+        trainerRating = findViewById(R.id.traker_personal_trainer_layout_trainer_rating_layout);
+        trainerChoosingButton = findViewById(R.id.traker_personal_trainer_layout_trainer_choose_button);
 
     }
     private void initViews() {
-        trainerChoosingButton.setOnClickListener(new OnClickListener() {
+        setTrakerPersonalTrainerLayoutInterface(trakerPersonalTrainerLayoutInterface);
+        setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                chooseTrainer();
+                trakerPersonalTrainerLayoutInterface.onChooseTrainer(trainer);
             }
         });
         initRating();
@@ -80,24 +87,37 @@ public class TrakerPersonalTrainerLayout extends CustomTrakerLayout {
     }
 
     private void dumpTrainerDetails(PersonalTrainer trainer){
-//            trainerImage.setBackgroundResource(Integer.valueOf(trainer.getImageUri()));
+            trainerImage.setBackgroundResource(Integer.valueOf(trainer.getImageUri()));
             trainerName.setText(trainer.getFullName());
             trainerExperience.setText(trainer.getExperience()
                     + " "
                     + getResources().getString(R.string.trainer_choosing_auto_completion_for_trainer_experience)
-                    +" "
+                    + ", "
                     + trainer.getSpeciality());
             applyRatingToTrainer(trainer.getRating());
     }
 
     private void applyRatingToTrainer(int rating) {
-        for(int j = 0; j < rating; j++){
-            trainerRating.getChildAt(rating).setBackgroundResource(R.drawable.personal_trainer_star_rating_on);
+        for(int i = 0; i < rating; i++){
+            trainerRating.getChildAt(i).setBackgroundResource(R.drawable.personal_trainer_star_rating_on);
 
         }
     }
 
-    private void chooseTrainer() {
-        // TODO implement this method.
+    public interface TrakerPersonalTrainerLayoutInterface{
+        void onChooseTrainer(PersonalTrainer personalTrainer);
     }
+//    public enum LayoutOrientation {
+//        VERTICAL(R.layout.vertical_traker_personal_trainer_layout),
+//        HORIZONTAL(R.layout.traker_personal_trainer_layout);
+//
+//        private final int id;
+//
+//        LayoutOrientation(int id){
+//            this.id = id;
+//        }
+//        public int getId(){
+//            return id;
+//        }
+//    };
 }

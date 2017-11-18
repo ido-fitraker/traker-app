@@ -1,6 +1,7 @@
 package com.traker.traker.activities.login_flow;
 
 import android.content.Intent;
+import android.os.Parcel;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +24,7 @@ public class TrainerChoosingActivity extends AppCompatActivity {
     // UI
     private LinearLayout mBackButton;
     private TrakerButton mSkipButton;
-    private TrakerLinearLayout mTrainersLayout;
+    private LinearLayout mTrainersLayout;
 
     // data
     private TrakerLinearLayout mChosenGoalLayout;
@@ -58,9 +59,18 @@ public class TrainerChoosingActivity extends AppCompatActivity {
                     FitnessGoal.GENERAL_GOAL, false, true, false,
                                 String.valueOf(R.drawable.coach_image_on)));
         TrakerLog.i(TrakerLog.getCause()+" added second.");
-        list.add(new PersonalTrainer("איתי נגר", 1, 6, getResources().getString(R.string.my_Goals_weight_loss_goal),
+        list.add(new PersonalTrainer("איתי נגר", 4, 6, getResources().getString(R.string.my_Goals_weight_loss_goal),
                 FitnessGoal.WEIGHT_LOSS_GOAL, true, false, true,
                                 String.valueOf(R.drawable.coach_image_on)));
+        list.add(new PersonalTrainer("איתי נבות", 4, 6, getResources().getString(R.string.my_Goals_weight_loss_goal),
+                FitnessGoal.WEIGHT_LOSS_GOAL, true, false, true,
+                String.valueOf(R.drawable.coach_image_on)));
+        list.add(new PersonalTrainer("הדר מקסימוב", 4, 6, getResources().getString(R.string.my_Goals_weight_loss_goal),
+                FitnessGoal.WEIGHT_LOSS_GOAL, true, false, true,
+                String.valueOf(R.drawable.coach_image_on)));
+        list.add(new PersonalTrainer("דור ויזנר", 4, 6, getResources().getString(R.string.my_Goals_weight_loss_goal),
+                FitnessGoal.WEIGHT_LOSS_GOAL, true, false, true,
+                String.valueOf(R.drawable.coach_image_on)));
         TrakerLog.i(TrakerLog.getCause()+" added third.");
         TrakerLog.d(TrakerLog.getCause()+" initiated mock list.");
         return list;
@@ -72,14 +82,20 @@ public class TrainerChoosingActivity extends AppCompatActivity {
         mChosenGoalLayout = (TrakerLinearLayout)findViewById(R.id.trainer_choosing_chosen_goal_layout);
         mChosenGoalImage = (ImageView)findViewById(R.id.trainer_choosing_chosen_goal_layout_goal_image);
         mChosenGoalText = (TextView)findViewById(R.id.trainer_choosing_chosen_goal_layout_goal_text);
-        mTrainersLayout = (TrakerLinearLayout)findViewById(R.id.trainer_choosing_personal_trainers_list_layout);
+        mTrainersLayout = (LinearLayout)findViewById(R.id.trainer_choosing_personal_trainers_list_layout);
         TrakerLog.d(TrakerLog.getCause()+" binded views.");
     }
     private void initViews(){
         assignBackButtonListener();
         assignSkipButtonListener();
+        assignTrainerListener();
         TrakerLog.d(TrakerLog.getCause()+" initiated views.");
     }
+
+    private void assignTrainerListener() {
+
+    }
+
     private void initData(){
         loadGoalToScreen();
         loadPersonalTrainersList(mockList);
@@ -125,25 +141,29 @@ public class TrainerChoosingActivity extends AppCompatActivity {
 
     private void loadPersonalTrainersList(ArrayList<PersonalTrainer> trainers) {
         for(int i = 0; i < trainers.size(); i++){
-                TrakerPersonalTrainerLayout tptl = new TrakerPersonalTrainerLayout(this);
+                TrakerPersonalTrainerLayout trakerPersonalTrainerLayout = new TrakerPersonalTrainerLayout(this);
                 TrakerLog.w(TrakerLog.getCause() + " initiated TrakerPersonaLinearLayout.");
-        try {
-                tptl.setTrainer(trainers.get(i));
-        }catch(Exception e) {
-            TrakerLog.w(TrakerLog.getCause() + " first problem.");
+                trakerPersonalTrainerLayout.setTrainer(trainers.get(i));
+                trakerPersonalTrainerLayout.setTrakerPersonalTrainerLayoutInterface(
+                        new TrakerPersonalTrainerLayout.TrakerPersonalTrainerLayoutInterface() {
+                    @Override
+                    public void onChooseTrainer(PersonalTrainer personalTrainer) {
+                        chooseTrainer(personalTrainer);
+                        TrakerLog.d(TrakerLog.getCause()+" activated chooseTrainer(PersonalTrainer).");
+                    }
+                });
+                mTrainersLayout.addView(trakerPersonalTrainerLayout);
 
-            TrakerLog.w(TrakerLog.getCause() + "used setTrainer with trainer: " + trainers.get(i));
-
-        }try {
-                mTrainersLayout.addView(tptl);
-            }catch(Exception e){
-                TrakerLog.w(TrakerLog.getCause()+" second problem.");
-            TrakerLog.w(TrakerLog.getCause()+" added view: "+tptl);
-                TrakerLog.w(TrakerLog.getCause()+" some problem");
             }
         }
 
+    private void chooseTrainer(PersonalTrainer personalTrainer) {
+        Intent trainerIntent = new Intent(this, ChosenTrainerActivity.class);
+        trainerIntent.putExtra("chosen_trainer", personalTrainer);
+        TrakerLog.i(TrakerLog.getCause()+"my trainer: " + personalTrainer);
+        startActivity(trainerIntent);
     }
+
 
     private void loadGoalToScreen() {
         Intent intent = getIntent();

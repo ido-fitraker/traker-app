@@ -33,14 +33,9 @@
     <string name="no_button">לא</string>
 
 
-
-
     <!-- PersonalDetailsActivity screen -->
     <string name="personal_details_questionnaire_question_age">הגיל שלי...</string>
     <string name="personal_details_questionnaire_question_name">קוראים לי...</string>
-
-
-
 
 
     <!-- HealthFormActivity screen -->
@@ -60,7 +55,6 @@
     <string name="health_form_sixth_question">האם הינך סובל ממחלה קבועה כרונית, שאינה נזכרת בשאלות לעיל ועשויה למנוע או להגביל אותך בביצוע פעילות גופנית?</string>
 
 
-
     <!-- MyGoalsActivity screen-->
     <string name="my_goals_build_muscles_goal">בניית שרירים</string>
     <string name="my_Goals_weight_loss_goal">ירידה במשקל</string>
@@ -70,11 +64,13 @@
     <string name="my_goals_military_goal">הכשרה לכושר קרבי</string>
     <string name="my_goals_title_explanation_text">המטרה שלי היא...</string>
 
-    <!-- TrainerChoosingActivity screen -->
+    <!-- ChosenTrainerActivity screen -->
     <string name="trainer_choosing_explanation_text">בחירת מאמן תואם למטרה שלך</string>
-    <string name="trainer_choosing_auto_completion_for_trainer_experience"> שנות ניסיון, </string>
-    
-    
+    <string name="trainer_choosing_auto_completion_for_trainer_experience">שנות ניסיון</string>
+    <string name="schedule_session">לקביעת אימון חינם</string>
+    <string name="chosen_trainer_title_text">בחרת במאמן</string>
+
+
     <!-- strings related to CodeVerificationActivity screen -->
 
 </resources>

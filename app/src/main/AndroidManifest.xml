@@ -37,8 +37,10 @@
         <activity
             android:name=".activities.login_flow.HealthFormActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".activities.login_flow.TrainerChoosingActivity"
+        <activity
+            android:name=".activities.login_flow.TrainerChoosingActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".activities.login_flow.ChosenTrainerActivity"></activity>
     </application>
 
 </manifest>

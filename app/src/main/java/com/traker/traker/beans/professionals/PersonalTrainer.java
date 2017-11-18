@@ -1,14 +1,20 @@
 package com.traker.traker.beans.professionals;
 
+import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.traker.traker.beans.enums.FitnessGoal;
 import com.traker.traker.components.TrakerLinearLayout;
 import com.traker.traker.util.loggers.TrakerLog;
+
+import static android.R.attr.data;
 
 /**
  * Created by idoengel on 8/30/17.
  */
 
-public class PersonalTrainer implements ProfessionalStaffPerson {
+public class PersonalTrainer implements ProfessionalStaffPerson, Parcelable {
 
     private String fullName;
     private int rating;
@@ -27,6 +33,35 @@ public class PersonalTrainer implements ProfessionalStaffPerson {
     public PersonalTrainer(String fullName, int rating, int experience, String speciality,
                            FitnessGoal goalSpeciality, boolean maleTrainer, boolean femaleTrainer,
                            boolean trainerOfTheMonth, String imageUri) {
+        setUpPersonalTrainer(
+                fullName,
+                rating,
+                experience,
+                speciality,
+                goalSpeciality,
+                maleTrainer,
+                femaleTrainer,
+                trainerOfTheMonth,
+                imageUri);
+        TrakerLog.d(TrakerLog.getCause()+this.toString());
+    }
+    public PersonalTrainer(Parcel in){
+        setUpPersonalTrainer(
+                in.readString(),
+                in.readInt(),
+                in.readInt(),
+                in.readString(),
+                (FitnessGoal)in.readSerializable(),
+                Boolean.valueOf(in.readString()),
+                Boolean.valueOf(in.readString()),
+                Boolean.valueOf(in.readString()),
+                in.readString()
+        );
+    }
+
+    private void setUpPersonalTrainer(String fullName, int rating, int experience, String speciality,
+                                      FitnessGoal goalSpeciality, boolean maleTrainer, boolean femaleTrainer,
+                                      boolean trainerOfTheMonth, String imageUri) {
         this.fullName = fullName;
         this.rating = rating;
         this.experience = experience;
@@ -36,7 +71,6 @@ public class PersonalTrainer implements ProfessionalStaffPerson {
         this.femaleTrainer = femaleTrainer;
         this.trainerOfTheMonth = trainerOfTheMonth;
         this.imageUri = imageUri;
-        TrakerLog.d(TrakerLog.getCause()+this.toString());
     }
 
     public String getFullName() {
@@ -125,4 +159,40 @@ public class PersonalTrainer implements ProfessionalStaffPerson {
                 ", imageUri='" + imageUri + '\'' +
                 '}';
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(this.fullName);
+        parcel.writeInt(this.rating);
+        parcel.writeInt(this.experience);
+        parcel.writeString(this.speciality);
+        parcel.writeSerializable(this.goalSpeciality);
+        parcel.writeString(Boolean.valueOf(this.maleTrainer).toString());
+        parcel.writeString(Boolean.valueOf(this.femaleTrainer).toString());
+        parcel.writeString(Boolean.valueOf(this.trainerOfTheMonth).toString());
+        parcel.writeString(this.imageUri);
+        }
+
+    public static final Creator<PersonalTrainer> CREATOR = new Creator<PersonalTrainer>() {
+        @Override
+        public PersonalTrainer createFromParcel(Parcel in) {
+            return new PersonalTrainer(in);
+        }
+
+        @Override
+        public PersonalTrainer[] newArray(int size) {
+            return new PersonalTrainer[size];
+        }
+    };
+
 }
+
+
+
+
+

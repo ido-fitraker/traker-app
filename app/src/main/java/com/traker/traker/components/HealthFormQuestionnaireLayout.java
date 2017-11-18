@@ -79,6 +79,9 @@ public class HealthFormQuestionnaireLayout extends LinearLayout {
         mHealthFormButtons = new ArrayList<TrakerButton>();
         for(int id : buttons){
             final TrakerButton button = findViewById(id);
+            // fixing buttons' size to Sympli measurements.
+//            button.setWidth(49);
+//            button.setHeight(32);
             button.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -91,6 +94,8 @@ public class HealthFormQuestionnaireLayout extends LinearLayout {
         }
         TrakerLog.d(TrakerLog.getCause()+" health form initialized.");
     }
+
+
 
     private void buttonClicked(TrakerButton button) {
         mHealthFormListener.onPressed(button);

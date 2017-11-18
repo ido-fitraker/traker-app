@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.traker.traker.activities.login_flow.ChosenTrainerActivity"
+    android:background="@color/colorBlack">
+    <LinearLayout
+        android:id="@+id/chosen_trainer_linear_layout_back_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@drawable/back_screen_button_arrow_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/back_text"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/chosen_trainer_traker_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorBlack"
+        android:text="@string/app_name"
+        android:textColor="@color/colorTraker"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="139dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chosen_trainer_screen_title"
+        android:layout_marginTop="0dp"
+        android:text="@string/chosen_trainer_title_text"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chosen_trainer_traker_title"
+        tools:layout_editor_absoluteX="153dp" />
+
+    <com.traker.traker.components.VerticalTrakerPersonalTrainerLayout
+        android:id="@+id/chosen_trainer_personal_trainer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/chosen_trainer_personal_trainer_review_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chosen_trainer_screen_title"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+    </com.traker.traker.components.VerticalTrakerPersonalTrainerLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/chosen_trainer_continue_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/chosen_trainer_personal_trainer_review_text"
+        android:text="@string/health_form_text"
+        android:layout_marginBottom="0dp" />
+
+
+    <com.traker.traker.components.TrakerButton
+        android:id="@+id/chosen_trainer_continue_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTraker"
+        android:text="@string/schedule_session"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
