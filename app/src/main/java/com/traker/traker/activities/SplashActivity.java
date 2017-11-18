@@ -6,7 +6,10 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.traker.traker.R;
+import com.traker.traker.activities.login_flow.HealthFormActivity;
+import com.traker.traker.activities.login_flow.MyGoalsActivity;
 import com.traker.traker.activities.login_flow.RegistrationActivity;
+import com.traker.traker.activities.login_flow.TrainerChoosingActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -19,7 +22,8 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
                                       @Override
                                       public void run() {
-                                          Intent i = new Intent(SplashActivity.this, RegistrationActivity.class);
+//                                          Intent i = new Intent(SplashActivity.this, RegistrationActivity.class);
+                                          Intent i = new Intent(SplashActivity.this, HealthFormActivity.class);
                                           startActivity(i);
 
                                           finish();
