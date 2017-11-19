@@ -39,12 +39,12 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activities.login_flow.TrainerChoosingActivity"
-<<<<<<< Updated upstream
-=======
+
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".activities.NewsFeedActivity"
->>>>>>> Stashed changes
+
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+
         <activity android:name=".activities.login_flow.ChosenTrainerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
