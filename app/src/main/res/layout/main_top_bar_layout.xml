@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF434242"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp">
+
+    <LinearLayout
+        android:id="@+id/main_top_bar_current_level_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_top_bar_current_level_layout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/main_top_bar_current_level_text"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/main_top_bar_current_level_layout_levels_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_top_bar_current_level_layout_levels_layout_road_to_next_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_top_bar_rounded_frame"
+                android:text="578/1000"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/main_top_bar_current_level_layout_levels_layout_current_level_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/personal_trainer_star_rating_on" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_top_bar_coins_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_top_bar_coins_layout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/main_top_bar_coins_layout_text"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/main_top_bar_coins_layout_coin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_top_bar_coins_layout_coin_layout_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/main_top_bar_rounded_frame"
+                android:gravity="center"
+                android:text="15"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/main_top_bar_coins_layout_coin_layout_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/build_goal_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_top_bar_layout_goals_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_top_bar_layout_goals_layout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/main_top_bar_goals_layout_text"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/main_top_bar_layout_goals_layout_goal_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/main_top_bar_layout_goals_layout_goal_layout_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_top_bar_rounded_frame"
+                android:gravity="center"
+                android:text="goal"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/main_top_bar_layout_goals_layout_goal_layout_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/general_goal_icon" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_top_bar_layout_notifications_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/main_top_bar_layout_notifications_layout_notifications_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@drawable/heart_goal_icon" />
+
+        <ImageView
+            android:id="@+id/main_top_bar_layout_notifications_layout_number_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

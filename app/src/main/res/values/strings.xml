@@ -14,11 +14,6 @@
     <string name="number_eight">8</string>
     <string name="number_nine">9</string>
 
-    <!-- enum values -->
-
-
-    <!-- end of enum values -->
-
     <!-- Strings related to login -->
     <string name="phone_number_screen_literal_description">על מנת להיכנס, יש להזין מס\' נייד</string>
     <string name="code_verification_qestion">מה הקוד שקיבלת?</string>
@@ -32,12 +27,18 @@
     <string name="yes_button">כן</string>
     <string name="no_button">לא</string>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <!-- PersonalDetailsActivity screen -->
     <string name="personal_details_questionnaire_question_age">הגיל שלי...</string>
     <string name="personal_details_questionnaire_question_name">קוראים לי...</string>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <!-- HealthFormActivity screen -->
     <string name="health_form_text_title">הצהרת בריאות</string>
     <string name="health_form_first_question_question">האם הרופא שלך אמר לך שאתה סובל ממחלת לב?</string>
@@ -54,7 +55,10 @@
     <string name="health_form_fifth_question">האם הרופא שלך אמר לך ב-5 השנים האחרונות לבצע פעילות גופנית רק תחת השגחה רפואית?</string>
     <string name="health_form_sixth_question">האם הינך סובל ממחלה קבועה כרונית, שאינה נזכרת בשאלות לעיל ועשויה למנוע או להגביל אותך בביצוע פעילות גופנית?</string>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <!-- MyGoalsActivity screen-->
     <string name="my_goals_build_muscles_goal">בניית שרירים</string>
     <string name="my_Goals_weight_loss_goal">ירידה במשקל</string>
@@ -66,11 +70,19 @@
 
     <!-- ChosenTrainerActivity screen -->
     <string name="trainer_choosing_explanation_text">בחירת מאמן תואם למטרה שלך</string>
+<<<<<<< Updated upstream
     <string name="trainer_choosing_auto_completion_for_trainer_experience">שנות ניסיון</string>
     <string name="schedule_session">לקביעת אימון חינם</string>
     <string name="chosen_trainer_title_text">בחרת במאמן</string>
 
 
     <!-- strings related to CodeVerificationActivity screen -->
+=======
+    <string name="trainer_choosing_auto_completion_for_trainer_experience"> שנות ניסיון, </string>
+>>>>>>> Stashed changes
 
+    <!-- main_top_bar component -->
+    <string name="main_top_bar_current_level_text">רמה נוכחית</string>
+    <string name="main_top_bar_coins_layout_text">מטבעות מאמץ</string>
+    <string name="main_top_bar_goals_layout_text">מטרה גופנית</string>
 </resources>
