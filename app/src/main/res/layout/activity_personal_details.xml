@@ -37,26 +37,42 @@
         android:text="@string/short_introduction_text"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personal_details_screen_title" />
 
-    <ImageView
+    <!--<ImageView-->
+        <!--android:id="@+id/personal_details_personal_image"-->
+        <!--android:layout_width="96dp"-->
+        <!--android:layout_height="96dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/personal_details_short_introduction_text"-->
+        <!--app:layout_constraintVertical_chainStyle="spread"-->
+        <!--app:srcCompat="@drawable/login_details_blank_picture" />-->
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/personal_details_personal_image"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="149dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/login_details_blank_picture"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personal_details_short_introduction_text"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:srcCompat="@drawable/login_details_blank_picture" />
+        app:layout_constraintVertical_bias="0.293" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -64,30 +80,29 @@
         android:gravity="center_vertical"
         app:layout_constraintBottom_toTopOf="@+id/personal_details_questionnaire"
         app:layout_constraintEnd_toEndOf="@+id/personal_details_questionnaire"
-        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/personal_details_questionnaire"
-        app:layout_constraintTop_toBottomOf="@+id/personal_details_personal_image">
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView"
+        tools:layout_editor_absoluteX="75dp">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:background="@android:color/black"
             app:layout_constraintHorizontal_bias="0.509"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/personal_details_personal_image"
             app:srcCompat="@drawable/login_details_facebook_logo" />
+
         <TextView
-            android:layout_width="189dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
+            android:paddingStart="10dp"
             android:text="@string/personal_details_facebook_details_text"
             android:textAlignment="viewEnd"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -108,6 +123,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1.02"
             android:hint="@string/personal_details_questionnaire_question_name"
+            android:inputType="textPersonName"
             android:textColor="@color/colorWhite" />
 
         <EditText

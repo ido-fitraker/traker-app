@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.traker.traker.R;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by idoengel on 10/29/17.

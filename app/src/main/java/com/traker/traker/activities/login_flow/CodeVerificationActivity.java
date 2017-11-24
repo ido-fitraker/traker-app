@@ -6,14 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
 
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.traker.traker.R;
 import com.traker.traker.components.LoginKeyboard;
 import com.traker.traker.managers.LoginManager;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
 import java.util.Arrays;

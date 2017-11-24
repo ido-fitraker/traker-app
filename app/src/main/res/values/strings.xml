@@ -61,6 +61,7 @@
     <string name="trainer_choosing_auto_completion_for_trainer_experience">שנות ניסיון</string>
     <string name="schedule_session">לקביעת אימון חינם</string>
     <string name="chosen_trainer_title_text">בחרת במאמן</string>
+    <string name="chosen_trainer_both_male_and_female_trainer">מאמן גברים ונשים</string>
 
     <!-- main_top_bar component -->
     <string name="main_top_bar_current_level_text">רמה נוכחית</string>

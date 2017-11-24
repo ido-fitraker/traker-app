@@ -3,7 +3,6 @@ package com.traker.traker.activities.login_flow;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.PhoneNumberUtils;
 import android.view.KeyEvent;
 import android.view.inputmethod.BaseInputConnection;
 import android.widget.EditText;
@@ -11,9 +10,8 @@ import android.widget.Toast;
 
 import com.traker.traker.R;
 import com.traker.traker.components.LoginKeyboard;
-import com.traker.traker.components.TrakerButton;
 import com.traker.traker.managers.LoginManager;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -23,7 +21,7 @@ public class RegistrationActivity extends AppCompatActivity {
     2. check that onClick methods work properly for all buttons.
     3. check JSON sending via API, and receiving a valid answer.
     4. solve problem with hebrew text reversed. - seems fine
-    5. add arrow icon to back button.
+    5. add login_keyboard_arrow_back_icon icon to back_screen_button_arrow_icon button.
     6. OK button needs to be tourquise only when the number entered is valid!
      */
 
@@ -60,7 +58,7 @@ public class RegistrationActivity extends AppCompatActivity {
             public void onBackPressed() {
                 BaseInputConnection textFieldInputConnection = new BaseInputConnection(mUserPhoneNumber, true);
                 textFieldInputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DEL));
-                TrakerLog.d(TrakerLog.getCause()+"back pressed");
+                TrakerLog.d(TrakerLog.getCause()+"back_screen_button_arrow_icon pressed");
 
             }
 

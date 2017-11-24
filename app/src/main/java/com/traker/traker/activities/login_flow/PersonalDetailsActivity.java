@@ -23,17 +23,16 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.traker.traker.R;
-import com.traker.traker.beans.TrakerUser;
 import com.traker.traker.components.TrakerButton;
-import com.traker.traker.managers.LoginManager;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
-import java.io.FileNotFoundException;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PersonalDetailsActivity extends AppCompatActivity {
 
-    private ImageView mProfileImage;
+    private CircleImageView mProfileImage;
     // might have to be some Facebook specific button. check with Facebook sdk.
+    // TODO implement Facebook sdk button login.
     private ImageButton mFacebookButton;
     private EditText mNamePersonalDetails;
     private EditText mAgePersonalDetails;
@@ -60,7 +59,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
     }
 
     private void bindViews() {
-        mProfileImage = (ImageView) findViewById(R.id.personal_details_personal_image);
+        mProfileImage = (CircleImageView) findViewById(R.id.personal_details_personal_image);
         mNamePersonalDetails = (EditText)findViewById(R.id.personal_details_questionnaire_name);
         mAgePersonalDetails = (EditText)findViewById(R.id.personal_details_questionnaire_age);
         mGenderPersonalDetails = (Spinner)findViewById(R.id.personal_details_questionnaire_gender_spinner);
@@ -154,7 +153,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data){
             Uri selectedImage = data.getData();
-            TrakerLog.d(TrakerLog.getCause()+" path to selected image: "+selectedImage.toString());
+            TrakerLog.d(TrakerLog.getCause()+" path to selected splash_screen_logo_traker: "+selectedImage.toString());
             String[] filePathColumn = { MediaStore.Images.Media.DATA };
 
             Cursor cursor = getContentResolver().query(selectedImage,
@@ -174,7 +173,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
             mProfileImage.setImageBitmap(bitmap);
 
 //            mProfileImage.setImageBitmap(BitmapFactory.decodeFile(picturePath));
-            TrakerLog.d(TrakerLog.getCause()+" set image bitmap on ImageView");
+            TrakerLog.d(TrakerLog.getCause()+" set splash_screen_logo_traker bitmap on ImageView");
 
         }
     }

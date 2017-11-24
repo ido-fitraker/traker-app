@@ -2,11 +2,8 @@ package com.traker.traker.components;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.widget.Button;
 
-import com.traker.traker.R;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 /**
  * Created by idoengel on 10/11/17.

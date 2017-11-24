@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TableLayout;
 
 import com.traker.traker.R;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
 
@@ -77,7 +77,7 @@ public class LoginKeyboard extends TableLayout {
             }
             case R.id.codeArrowBackButton: {
                 mLoginKeyboardListener.onBackPressed();
-                TrakerLog.d(TrakerLog.getCause()+" code arrow back button clicked");
+                TrakerLog.d(TrakerLog.getCause()+" code login_keyboard_arrow_back_icon back_screen_button_arrow_icon button clicked");
 
                 break;
             }

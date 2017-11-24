@@ -5,12 +5,11 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TableLayout;
 
 import com.traker.traker.R;
 import com.traker.traker.beans.enums.FitnessGoal;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
 

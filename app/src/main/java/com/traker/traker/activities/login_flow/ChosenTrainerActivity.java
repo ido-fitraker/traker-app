@@ -10,12 +10,10 @@ import android.widget.Toast;
 import com.traker.traker.R;
 import com.traker.traker.beans.professionals.PersonalTrainer;
 import com.traker.traker.components.TrakerButton;
-import com.traker.traker.components.TrakerPersonalTrainerLayout;
 import com.traker.traker.components.VerticalTrakerPersonalTrainerLayout;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
-import java.lang.reflect.Field;
-
+// TODO increase trainer's photo size to be better positioned. rearrange layout to ltr orientation.
 public class ChosenTrainerActivity extends AppCompatActivity {
 
     // UI

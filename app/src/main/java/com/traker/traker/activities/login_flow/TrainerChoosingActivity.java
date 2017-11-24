@@ -1,7 +1,6 @@
 package com.traker.traker.activities.login_flow;
 
 import android.content.Intent;
-import android.os.Parcel;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +14,10 @@ import com.traker.traker.beans.professionals.PersonalTrainer;
 import com.traker.traker.components.TrakerButton;
 import com.traker.traker.components.TrakerLinearLayout;
 import com.traker.traker.components.TrakerPersonalTrainerLayout;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
-
+// TODO rearrange the rating layout and back button according to ltr orientation.
 public class TrainerChoosingActivity extends AppCompatActivity {
 
     // UI
@@ -128,7 +127,7 @@ public class TrainerChoosingActivity extends AppCompatActivity {
 
             }
         });
-        TrakerLog.d(TrakerLog.getCause()+" assigned back button listener.");
+        TrakerLog.d(TrakerLog.getCause()+" assigned back_screen_button_arrow_icon button listener.");
     }
 
     private void returnToPreviousScreen() {

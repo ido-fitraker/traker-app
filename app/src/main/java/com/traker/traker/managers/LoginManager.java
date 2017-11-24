@@ -1,5 +1,6 @@
 package com.traker.traker.managers;
 
+import com.traker.traker.activities.login_flow.ChosenTrainerActivity;
 import com.traker.traker.activities.login_flow.CodeVerificationActivity;
 import com.traker.traker.activities.login_flow.HealthFormActivity;
 import com.traker.traker.activities.login_flow.MyGoalsActivity;
@@ -7,12 +8,7 @@ import com.traker.traker.activities.login_flow.PersonalDetailsActivity;
 import com.traker.traker.activities.login_flow.RegistrationActivity;
 import com.traker.traker.activities.login_flow.TrainerChoosingActivity;
 import com.traker.traker.beans.TrakerUser;
-import com.traker.traker.beans.professionals.PersonalTrainer;
-import com.traker.traker.util.loggers.TrakerLog;
-import com.traker.traker.util.requests.RequestBase;
-import com.traker.traker.util.requests.RequestLogin;
-
-import java.util.ArrayList;
+import com.traker.traker.utils.TrakerLog;
 
 /**
  * Created by idoengel on 10/11/17.
@@ -20,21 +16,31 @@ import java.util.ArrayList;
 
 public class LoginManager {
 
-    private static LoginManager instance = new LoginManager();
+    private static volatile LoginManager instance = new LoginManager();
     private static TrakerUser loggedinUser = new TrakerUser();
     private Object parcel;
 
 
-    public static LoginManager getInstance(){ return instance; }
+    public static LoginManager getInstance(){
+        if  (instance == null) {
+            synchronized (LoginManager.class) {
+                if (instance == null) {
+                    instance = new LoginManager();
+                }
+            }
+        }
+        return instance;
+    }
     private LoginManager(){ }
 
-    private static final Class[] LOGIN_ACTIVITIES = new Class[]{
+    public static final Class[] LOGIN_ACTIVITIES = new Class[]{
         RegistrationActivity.class,
         CodeVerificationActivity.class,
         PersonalDetailsActivity.class,
         HealthFormActivity.class,
         MyGoalsActivity.class,
-        TrainerChoosingActivity.class
+        TrainerChoosingActivity.class,
+        ChosenTrainerActivity.class
     };
 
     public void attemptLogin(String phoneNumber){
@@ -75,4 +81,6 @@ public class LoginManager {
     public void setObject(Object parcel) {
         this.parcel = parcel;
     }
+
+
 }

@@ -8,12 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import com.traker.traker.R;
 import com.traker.traker.activities.login_flow.HealthFormActivity;
 import com.traker.traker.activities.login_flow.MyGoalsActivity;
+import com.traker.traker.activities.login_flow.PersonalDetailsActivity;
 import com.traker.traker.activities.login_flow.RegistrationActivity;
 import com.traker.traker.activities.login_flow.TrainerChoosingActivity;
+import com.traker.traker.managers.LoginManager;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int SPLASH_TIME_OUT = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,9 @@ public class SplashActivity extends AppCompatActivity {
                                       @Override
                                       public void run() {
 //                                          Intent i = new Intent(SplashActivity.this, RegistrationActivity.class);
-                                          Intent i = new Intent(SplashActivity.this, HealthFormActivity.class);
+                                          Intent i = new Intent(SplashActivity.this,
+                                                  LoginManager.getInstance().LOGIN_ACTIVITIES[0]);
+//                                                  PersonalDetailsActivity.class);
                                           startActivity(i);
 
                                           finish();

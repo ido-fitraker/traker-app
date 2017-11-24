@@ -1,14 +1,10 @@
 package com.traker.traker.beans.professionals;
 
-import android.content.Intent;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.traker.traker.beans.enums.FitnessGoal;
-import com.traker.traker.components.TrakerLinearLayout;
-import com.traker.traker.util.loggers.TrakerLog;
-
-import static android.R.attr.data;
+import com.traker.traker.utils.TrakerLog;
 
 /**
  * Created by idoengel on 8/30/17.

@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.traker.traker.R;
 import com.traker.traker.beans.professionals.PersonalTrainer;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 /**
  * Created by idoroiengel on 11/14/17.
@@ -100,9 +100,9 @@ public class VerticalTrakerPersonalTrainerLayout extends CustomTrakerLayout {
         for(int i = 0; i < trainerMaleFemaleTraining.getChildCount(); i++){
             View currentView = trainerMaleFemaleTraining.getChildAt(i);
             if(currentView instanceof TextView){
-                ((TextView) currentView).setText(
-                        String.valueOf("male:" + trainer.isMaleTrainer())+
-                        String.valueOf("female: " + trainer.isFemaleTrainer()));
+                ((TextView) currentView).setText(R.string.chosen_trainer_both_male_and_female_trainer);
+//                        String.valueOf("male:" + trainer.isMaleTrainer())+
+//                        String.valueOf("female: " + trainer.isFemaleTrainer()));
             }
 
         }

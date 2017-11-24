@@ -1,27 +1,18 @@
 package com.traker.traker.activities.login_flow;
 
 import android.content.Intent;
-import android.content.res.XmlResourceParser;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.traker.traker.R;
 import com.traker.traker.components.HealthFormQuestionnaireLayout;
 import com.traker.traker.components.TrakerButton;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
-import org.w3c.dom.Text;
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 

@@ -13,14 +13,14 @@ import com.traker.traker.components.MyGoalsLayout;
 import com.traker.traker.components.TrakerButton;
 import com.traker.traker.components.TrakerLinearLayout;
 import com.traker.traker.managers.LoginManager;
-import com.traker.traker.util.loggers.TrakerLog;
+import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
 
 /**
  * Created by idoengel on 10/24/17.
  */
-
+// TODO tweak the border layout so it will be even for every goal icon.
 public class MyGoalsActivity extends AppCompatActivity {
     private LinearLayout mBackButton;
     private TrakerButton mContinueButton;
