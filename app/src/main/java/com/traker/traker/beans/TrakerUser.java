@@ -22,19 +22,20 @@ public class TrakerUser {
     private int systemRating;
     private long goalsId;
     private int points;
-    private long levelId;
+    private long level;
     private long coachId;
     private long typeId;
     private int age;
     private RelationshipStatus status;
     private FitnessGoal fitnessGoal;
+    private int coins;
 
     public TrakerUser() {
     }
 
     public TrakerUser(long id, String fullName, long phone, String profileImageURI, String email, String gender,
                       long birthday, long facebookId, long tokenId, int socialRating, int systemRating, long goalsId,
-                      int points, long levelId, long coachId, long typeId, int age, RelationshipStatus status) {
+                      int points, long level, long coachId, long typeId, int age, RelationshipStatus status, int coins) {
         this.id = id;
         this.fullName = fullName;
         this.phone = phone;
@@ -48,11 +49,12 @@ public class TrakerUser {
         this.systemRating = systemRating;
         this.goalsId = goalsId;
         this.points = points;
-        this.levelId = levelId;
+        this.level = level;
         this.coachId = coachId;
         this.typeId = typeId;
         this.age = age;
         this.status = status;
+        this.coins = coins;
     }
 
     public long getId() {
@@ -159,12 +161,12 @@ public class TrakerUser {
         this.points = points;
     }
 
-    public long getLevelId() {
-        return levelId;
+    public long getLevel() {
+        return level;
     }
 
-    public void setLevelId(long levelId) {
-        this.levelId = levelId;
+    public void setLevel(long level) {
+        this.level = level;
     }
 
     public long getCoachId() {
@@ -211,12 +213,20 @@ public class TrakerUser {
                 ", systemRating=" + systemRating +
                 ", goalsId=" + goalsId +
                 ", points=" + points +
-                ", levelId=" + levelId +
+                ", level=" + level +
                 ", coachId=" + coachId +
                 ", typeId=" + typeId +
                 ", age=" + age +
                 ", status=" + status +
                 ", fitnessGoal=" + fitnessGoal +
                 '}';
+    }
+
+    public int getCoins() {
+        return coins;
+    }
+
+    public void setCoins(int coins) {
+        this.coins = coins;
     }
 }

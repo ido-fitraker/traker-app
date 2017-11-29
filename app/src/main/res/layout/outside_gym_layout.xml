@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.traker.traker.components.MainTopBar
+            android:id="@+id/outside_gym_layout_main_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/outside_gym_layout_dynamic_table_row">
+    <fragment android:name="com.traker.traker.components.NewsfeedLayout"
+        android:id="@+id/outside_gym_layout_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.traker.traker.components.MainBottomBar
+            android:id="@+id/outside_gym_layout_main_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </TableRow>
+</TableLayout>

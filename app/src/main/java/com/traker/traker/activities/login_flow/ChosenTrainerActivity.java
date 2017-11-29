@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.traker.traker.R;
+import com.traker.traker.activities.NewsFeedActivity;
 import com.traker.traker.beans.professionals.PersonalTrainer;
 import com.traker.traker.components.TrakerButton;
 import com.traker.traker.components.VerticalTrakerPersonalTrainerLayout;
@@ -63,11 +64,19 @@ public class ChosenTrainerActivity extends AppCompatActivity {
         mContinueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setupPersonalTraining();
+                continueToNextScreen();
             }
         });
         TrakerLog.d(TrakerLog.getCause()+" assigned listeners.");
     }
+
+    private void continueToNextScreen() {
+        Intent i = new Intent(this, NewsFeedActivity.class);
+        startActivity(i);
+        setupPersonalTraining();
+
+    }
+
     private void returnToPreviousScreen(){
         Intent i = new Intent(this, TrainerChoosingActivity.class);
         startActivity(i);

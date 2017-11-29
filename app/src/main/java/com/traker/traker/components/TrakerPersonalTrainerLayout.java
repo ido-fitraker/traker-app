@@ -38,14 +38,9 @@ public class TrakerPersonalTrainerLayout extends CustomTrakerLayout {
     public TrakerPersonalTrainerLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.traker_personal_trainer_layout, this, true);
-//        LayoutInflater.from(context).inflate(getmLayoutOrientation().getId(), this, true);
         bindViews();
         initViews();
     }
-//    public TrakerPersonalTrainerLayout(){
-//        LayoutInflater.from(getContext()).inflate(getmLayoutOrientation().getId(), this, true);
-//    }
-
 
     public PersonalTrainer getTrainer() {
         return trainer;

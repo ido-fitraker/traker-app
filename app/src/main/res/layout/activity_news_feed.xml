@@ -6,13 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.traker.traker.activities.NewsFeedActivity">
 
-    <com.traker.traker.components.MainTopBar
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <com.traker.traker.components.OutsideGymLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/newsfeed_activity_outside_gym_layout">
 
-    </com.traker.traker.components.MainTopBar>
+    </com.traker.traker.components.OutsideGymLayout>
 
 </android.support.constraint.ConstraintLayout>

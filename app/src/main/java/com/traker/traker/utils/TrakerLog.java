@@ -39,7 +39,6 @@ public class TrakerLog {
     }
 
 
-
     // this method retrieves the class name and the method name that caused the exception.
     private static String getMessagePrefix(){
         String messagePrefix = "";
@@ -54,4 +53,8 @@ public class TrakerLog {
 
     public TrakerLog() {
     }
+    public TrakerLog(String message){
+        d(message);
+    }
+
 }

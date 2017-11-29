@@ -68,8 +68,6 @@ public class MyGoalsLayout extends TableLayout {
     private void assignEnumValue(TrakerLinearLayout layout, int index) {
         FitnessGoal[] myGoals = FitnessGoal.values();
         layout.setFitnessGoal(myGoals[index]);
-
-
 //        for(int j = 0; j < myGoals.length; j++){
 //            FitnessGoal tempMatch = myGoals[j];
 //            if(tempMatch.ordinal() == index)

@@ -19,8 +19,7 @@
         <TextView
             android:id="@+id/main_top_bar_current_level_layout_text"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:text="@string/main_top_bar_current_level_text"
             android:textColor="@color/colorWhite"
             android:textSize="14sp" />
@@ -28,8 +27,7 @@
         <LinearLayout
             android:id="@+id/main_top_bar_current_level_layout_levels_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -44,9 +42,9 @@
 
             <ImageView
                 android:id="@+id/main_top_bar_current_level_layout_levels_layout_current_level_image"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/personal_trainer_star_rating_on" />
+                android:src="@drawable/top_bar_star_no_number" />
         </LinearLayout>
 
 
@@ -63,8 +61,7 @@
         <TextView
             android:id="@+id/main_top_bar_coins_layout_text"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:text="@string/main_top_bar_coins_layout_text"
             android:textColor="@color/colorWhite"
             android:textSize="14sp" />
@@ -72,27 +69,25 @@
         <LinearLayout
             android:id="@+id/main_top_bar_coins_layout_coin_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/main_top_bar_coins_layout_coin_layout_text"
-                android:layout_width="0dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
                 android:background="@drawable/main_top_bar_rounded_frame"
                 android:gravity="center"
-                android:text="15"
+                android:textColor="@color/colorBlack"
                 android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/main_top_bar_coins_layout_coin_layout_image"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/build_goal_icon" />
+                android:src="@drawable/top_bar_coin_image"
+                 />
         </LinearLayout>
 
     </LinearLayout>
@@ -108,8 +103,7 @@
         <TextView
             android:id="@+id/main_top_bar_layout_goals_layout_text"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:text="@string/main_top_bar_goals_layout_text"
             android:textColor="@color/colorWhite"
             android:textSize="14sp" />
@@ -117,8 +111,7 @@
         <LinearLayout
             android:id="@+id/main_top_bar_layout_goals_layout_goal_layout"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -136,7 +129,7 @@
                 android:id="@+id/main_top_bar_layout_goals_layout_goal_layout_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/general_goal_icon" />
+                android:src="@drawable/top_bar_goal_image" />
 
 
         </LinearLayout>
@@ -156,12 +149,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="false"
-            android:src="@drawable/heart_goal_icon" />
+            android:src="@drawable/top_bar_notification_exist" />
 
         <ImageView
             android:id="@+id/main_top_bar_layout_notifications_layout_number_image"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:clickable="false"/>
     </LinearLayout>
 
 </LinearLayout>

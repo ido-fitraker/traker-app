@@ -15,7 +15,7 @@ import com.traker.traker.managers.LoginManager;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 1500;
+    private static int SPLASH_TIME_OUT = 1200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,8 @@ public class SplashActivity extends AppCompatActivity {
                                       public void run() {
 //                                          Intent i = new Intent(SplashActivity.this, RegistrationActivity.class);
                                           Intent i = new Intent(SplashActivity.this,
-                                                  LoginManager.getInstance().LOGIN_ACTIVITIES[0]);
-//                                                  PersonalDetailsActivity.class);
+//                                                  LoginManager.LOGIN_ACTIVITIES[0]);
+                                                  NewsFeedActivity.class);
                                           startActivity(i);
 
                                           finish();

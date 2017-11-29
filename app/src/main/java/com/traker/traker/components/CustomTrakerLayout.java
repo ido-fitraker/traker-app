@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
  */
 
 public abstract class CustomTrakerLayout extends LinearLayout {
+
+
     public CustomTrakerLayout(Context context) {
         super(context);
     }
@@ -17,6 +19,5 @@ public abstract class CustomTrakerLayout extends LinearLayout {
     public CustomTrakerLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
-
 
 }

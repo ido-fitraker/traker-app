@@ -59,9 +59,9 @@ public class MyGoalsActivity extends AppCompatActivity {
 
     private void changeGoalLayoutUI(TrakerLinearLayout layout) {
         ArrayList<TrakerLinearLayout> layoutList = mGoalsLayout.getmGoalsButtons();
-        for(TrakerLinearLayout tll : layoutList){
-            if(!tll.equals(layout)) {
-                tll.setBackgroundResource(R.color.colorBlack);
+        for(TrakerLinearLayout trakerLayout : layoutList){
+            if(!trakerLayout.equals(layout)) {
+                trakerLayout.setBackgroundResource(R.color.colorBlack);
             }
             else {
                 layout.setBackgroundResource(R.drawable.chosen_traker_button_border);

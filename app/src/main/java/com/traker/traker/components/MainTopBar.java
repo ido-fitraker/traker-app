@@ -4,13 +4,13 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.traker.traker.R;
+import com.traker.traker.beans.TrakerUser;
+import com.traker.traker.beans.enums.FitnessGoal;
+import com.traker.traker.utils.TrakerLog;
 
 /**
  * Created by idoroiengel on 11/18/17.
@@ -22,16 +22,18 @@ public class MainTopBar extends CustomTrakerLayout {
     private ImageView mCurrentLevelImage;
     private TextView mCoinsNumber;
     private TextView mFitnessGoal;
-    private TextView mNotificationsNumber;
+    private ImageView mNotificationsNumber;
 
     public MainTopBar(Context context) {
         this(context, null);
+        TrakerLog.i(TrakerLog.getCause()+" activated only-context constructor");
     }
 
     public MainTopBar(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.main_top_bar_layout, this, true);
         bindViews();
+        TrakerLog.i(TrakerLog.getCause()+" activated context+attributes constructor");
 //        ViewGroup.LayoutParams params = mCurrentLevelLayout.getLayoutParams();
 //
 //        params.width = 578/1000;
@@ -43,5 +45,24 @@ public class MainTopBar extends CustomTrakerLayout {
         mCoinsNumber = findViewById(R.id.main_top_bar_coins_layout_coin_layout_text);
         mFitnessGoal = findViewById(R.id.main_top_bar_layout_goals_layout_goal_layout_text);
         mNotificationsNumber = findViewById(R.id.main_top_bar_layout_notifications_layout_number_image);
+        TrakerLog.d(TrakerLog.getCause()+" binded views.");
+    }
+
+    public void initiate(TrakerUser user) {
+        // take needed points to next level.
+        // take current level number and add it to image top_bar_star_no_number.
+
+
+//        mCoinsNumber.setText(user.getCoins());
+        mCoinsNumber.setText("15");
+
+//        mFitnessGoal.setText(user.getFitnessGoal().toString());
+        mFitnessGoal.setText(FitnessGoal.BUILD_MUSCLES_GOAL.getName());
+        // take notifications number from user.
+        TrakerLog.d(TrakerLog.getCause()+" initiated main top bar.");
+    }
+
+    public interface MainTopBarInterface {
+
     }
 }

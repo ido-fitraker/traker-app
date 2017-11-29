@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF434242"
+    android:gravity="center"
+    android:padding="15dp">
+
+    <com.traker.traker.components.TrakerImageButton
+        android:id="@+id/main_bottom_bar_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FF434242"
+        android:src="@drawable/bottom_bar_menu_button" />
+
+    <com.traker.traker.components.TrakerImageButton
+        android:id="@+id/main_bottom_bar_home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FF434242"
+        android:src="@drawable/bottom_bar_home_button" />
+
+    <com.traker.traker.components.TrakerImageButton
+        android:id="@+id/main_bottom_bar_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FF434242"
+        android:src="@drawable/bottom_bar_personal_profile_button" />
+
+    <com.traker.traker.components.TrakerImageButton
+        android:id="@+id/main_bottom_bar_workout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FF434242"
+        android:src="@drawable/bottom_bar_workout_button" />
+
+    <com.traker.traker.components.TrakerImageButton
+        android:id="@+id/main_bottom_bar_calendar_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FF434242"
+        android:src="@drawable/bottom_bar_calendar_button" />
+
+</LinearLayout>
