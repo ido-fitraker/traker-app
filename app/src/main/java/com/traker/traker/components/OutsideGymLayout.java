@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
@@ -116,6 +117,10 @@ public class OutsideGymLayout extends TableLayout {
             }
         });
         TrakerLog.d(TrakerLog.getCause()+" initiated views.");
+    }
+    void tweakLayout(){
+        TableRow.LayoutParams rowLp = new TableRow.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT);
+
     }
 
 

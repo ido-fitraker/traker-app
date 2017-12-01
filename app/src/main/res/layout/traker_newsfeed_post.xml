@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/newsfeed_layout_rounded_border"
+    tools:layout_editor_absoluteY="25dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/newsfeed_post_publisher_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/coach_image_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/newsfeed_post_publisher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:text="ido engel"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_publisher_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/newsfeed_post_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="5 hours ago"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_publisher_image"
+        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_publisher_name" />
+
+    <TextView
+        android:id="@+id/newsfeed_post_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="some gibberish text"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_publisher_image" />
+
+    <ImageView
+        android:id="@+id/newsfeed_post_image_post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/newsfeed_sample_post_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_content_text" />
+
+    <LinearLayout
+        android:id="@+id/newsfeed_post_likes_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
+
+        <TextView
+            android:id="@+id/newsfeed_post_likes_layout_likes_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="23"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:id="@+id/newsfeed_post_likes_layout_likes_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/build_goal_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/newsfeed_post_comments_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_likes_layout"
+        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
+
+        <TextView
+            android:id="@+id/newsfeed_post_comments_layout_comments_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="45"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:id="@+id/newsfeed_post_comments_layout_comments_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/general_goal_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/newsfeed_post_shares_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_comments_layout"
+        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
+
+        <TextView
+            android:id="@+id/newsfeed_post_shares_layout_shares_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="3"
+            android:textColor="@color/colorBlack" />
+
+        <ImageView
+            android:id="@+id/newsfeed_post_shares_layout_shares_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/heart_goal_icon" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
