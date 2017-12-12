@@ -54,7 +54,7 @@ public class CodeVerificationActivity extends AppCompatActivity {
         TrakerLog.d(TrakerLog.getCause()+" binded views.");
     }
     /*  this method is for mock use only
-        delete it once the server can send the sms verification messages!
+        delete it once the server can traker_newsfeed_post_comment_send_icon the sms verification messages!
     */
     private void initData() {
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="20dp"
     android:background="@drawable/newsfeed_layout_rounded_border"
     tools:layout_editor_absoluteY="25dp">
 
@@ -53,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_publisher_image" />
 
-    <ImageView
+    <com.traker.traker.components.TrakerImageView
         android:id="@+id/newsfeed_post_image_post"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -64,87 +65,115 @@
         app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_content_text" />
 
     <LinearLayout
-        android:id="@+id/newsfeed_post_likes_layout"
+        android:id="@+id/newsfeed_post_management_post_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/traker_newsfeed_post_comments_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newsfeed_post_image_post">
+
+        <LinearLayout
+            android:id="@+id/newsfeed_post_likes_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
+
+            <TextView
+                android:id="@+id/newsfeed_post_likes_layout_likes_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="23"
+                android:textColor="@color/colorBlack" />
+
+            <com.traker.traker.components.TrakerImageButton
+                android:id="@+id/newsfeed_post_likes_layout_likes_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:src="@drawable/traker_newsfeed_post_like_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newsfeed_post_comments_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/traker_newsfeed_post_comments_section"
+            app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_likes_layout"
+            app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
+
+            <TextView
+                android:id="@+id/newsfeed_post_comments_layout_comments_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="45"
+                android:textColor="@color/colorBlack" />
+
+            <com.traker.traker.components.TrakerImageButton
+                android:id="@+id/newsfeed_post_comments_layout_comments_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:src="@drawable/traker_newsfeed_post_comment_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newsfeed_post_shares_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/traker_newsfeed_post_comments_section"
+            app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_comments_layout"
+            app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
+
+            <TextView
+                android:id="@+id/newsfeed_post_shares_layout_shares_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="3"
+                android:textColor="@color/colorBlack" />
+
+            <com.traker.traker.components.TrakerImageButton
+                android:id="@+id/newsfeed_post_shares_layout_shares_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:src="@drawable/traker_newsfeed_post_share_icon" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.traker.traker.components.TrakerNewsfeedPostCommentSection
+        android:id="@+id/traker_newsfeed_post_comments_section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/newsfeed_post_likes_layout_likes_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="23"
-            android:textColor="@color/colorBlack" />
-
-        <ImageView
-            android:id="@+id/newsfeed_post_likes_layout_likes_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/build_goal_icon" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/newsfeed_post_comments_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_likes_layout"
-        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
-
-        <TextView
-            android:id="@+id/newsfeed_post_comments_layout_comments_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="45"
-            android:textColor="@color/colorBlack" />
-
-        <ImageView
-            android:id="@+id/newsfeed_post_comments_layout_comments_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/general_goal_icon" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/newsfeed_post_shares_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/newsfeed_post_comments_layout"
-        app:layout_constraintTop_toBottomOf="@+id/newsfeed_post_image_post">
-
-        <TextView
-            android:id="@+id/newsfeed_post_shares_layout_shares_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="3"
-            android:textColor="@color/colorBlack" />
-
-        <ImageView
-            android:id="@+id/newsfeed_post_shares_layout_shares_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/heart_goal_icon" />
-    </LinearLayout>
+    </com.traker.traker.components.TrakerNewsfeedPostCommentSection>
 
 </android.support.constraint.ConstraintLayout>

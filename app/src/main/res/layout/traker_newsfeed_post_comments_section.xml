@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.traker.traker.components.TrakerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <com.traker.traker.components.TrakerTextView
+        android:id="@+id/traker_newsfeed_post_comments_section_comment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newsfeed_post_comments_section_add_comment_text"
+        android:textColor="@color/colorBlack" />
+    <com.traker.traker.components.TrakerImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/traker_newsfeed_post_comments_section_send_comment_button"
+        android:src="@drawable/traker_newsfeed_post_comment_send_icon"/>
+
+</com.traker.traker.components.TrakerLinearLayout>

@@ -3,6 +3,11 @@
     <string name="ok_button">OK</string>
     <string name="zero_number">0</string>
 
+    <!-- general phrases -->
+    <!-- height measurements -->
+    <string name="height_cm">ס"מ</string>
+    <string name="weight_kg">ק"ג</string>
+
     <!-- NUMBERS-->
     <string name="number_one">1</string>
     <string name="number_two">2</string>
@@ -67,4 +72,31 @@
     <string name="main_top_bar_current_level_text">רמה נוכחית</string>
     <string name="main_top_bar_coins_layout_text">מטבעות מאמץ</string>
     <string name="main_top_bar_goals_layout_text">מטרה גופנית</string>
+
+    <!-- menu layout screen -->
+    <string name="menu_layout_title_text">הגדרות</string>
+    <string name="menu_layout_account_text">חשבון</string>
+    <string name="menu_layout_support_text">תמיכה</string>
+    <string name="menu_layout_about_text">אודות</string>
+    <string name="menu_layout_my_gym_text">המכון שלי</string>
+    <string name="menu_layout_logout_text">התנתקות</string>
+    
+    <!-- personal profile screen -->
+    <string name="personal_profile_layout_followers_text">עוקבים</string>
+    <string name="personal_profile_layout_current_bmi_text">BMI נוכחי</string>
+    <string name="personal_profile_layout_initial_bmi_text">BMI התחלתי</string>
+    <string name="personal_profile_layout_height_text">גובה</string>
+    <string name="personal_profile_layout_initial_weight_text">משקל התחלתי</string>
+    
+    <!-- personal profile goal layout -->
+    <string name="personal_profile_goal_layout_goal_text">יעד</string>
+    <string name="personal_profile_goal_layout_enum_weight">משקל נוכחי</string>
+    <string name="personal_profile_goal_layout_enum_fat_percentage">אחוז שומן נוכחי</string>
+    <string name="personal_profile_goal_layout_enum_weekly_training_average">ממוצע אימונים שבועי</string>
+    <string name="personal_profile_goal_layout_enum_trainings_out_of_workout_plan">אימונים מהתוכנית שבוצעו</string>
+
+    <!-- newsfeed & co. screen -->
+    <string name="newsfeed_post_comments_section_add_comment_text">הוספת תגובה...</string>
+
+
 </resources>

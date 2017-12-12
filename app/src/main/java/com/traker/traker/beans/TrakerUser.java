@@ -29,6 +29,8 @@ public class TrakerUser {
     private RelationshipStatus status;
     private FitnessGoal fitnessGoal;
     private int coins;
+    private long height;
+    private long weight;
 
     public TrakerUser() {
     }
@@ -55,6 +57,22 @@ public class TrakerUser {
         this.age = age;
         this.status = status;
         this.coins = coins;
+    }
+
+    public long getHeight() {
+        return height;
+    }
+
+    public void setHeight(long height) {
+        this.height = height;
+    }
+
+    public long getWeight() {
+        return weight;
+    }
+
+    public void setWeight(long weight) {
+        this.weight = weight;
     }
 
     public long getId() {

@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.widget.ImageButton;
 
 import com.traker.traker.beans.enums.MainBottomBarEnum;
+import com.traker.traker.beans.enums.TrakerNewsfeedPostEnum;
 
 /**
  * Created by idoroiengel on 11/26/17.
@@ -14,6 +15,7 @@ import com.traker.traker.beans.enums.MainBottomBarEnum;
 public class TrakerImageButton extends AppCompatImageButton {
 
     private MainBottomBarEnum enumValue;
+    private TrakerNewsfeedPostEnum newsfeedPostEnumValue;
 
     public TrakerImageButton(Context context) {
         this(context, null);
@@ -29,5 +31,13 @@ public class TrakerImageButton extends AppCompatImageButton {
 
     public MainBottomBarEnum getEnumValue() {
         return enumValue;
+    }
+
+    public TrakerNewsfeedPostEnum getNewsfeedPostEnumValue() {
+        return newsfeedPostEnumValue;
+    }
+
+    public void setNewsfeedPostEnumValue(TrakerNewsfeedPostEnum newsfeedPostEnumValue) {
+        this.newsfeedPostEnumValue = newsfeedPostEnumValue;
     }
 }

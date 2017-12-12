@@ -55,7 +55,7 @@ public class LoginManager {
 //                TrakerLog.d(TrakerLog.getCause()+" onFail");
 //            }
 //        })
-//                .send();
+//                .traker_newsfeed_post_comment_send_icon();
         loggedinUser.setPhone(Long.valueOf(phoneNumber));
         TrakerLog.d(TrakerLog.getCause()+" attempt login sent.");
     }

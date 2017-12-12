@@ -39,14 +39,17 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activities.login_flow.TrainerChoosingActivity"
-
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".activities.NewsFeedActivity"
-
+        <activity
+            android:name=".activities.NewsFeedActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-
-        <activity android:name=".activities.login_flow.ChosenTrainerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity
+            android:name=".activities.login_flow.ChosenTrainerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.OutsideGymActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
     </application>
 
 </manifest>

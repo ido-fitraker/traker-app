@@ -4,7 +4,9 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.traker.traker.R;
@@ -23,6 +25,8 @@ public class MainTopBar extends CustomTrakerLayout {
     private TextView mCoinsNumber;
     private TextView mFitnessGoal;
     private ImageView mNotificationsNumber;
+    private LinearLayout mNotificationsLayout;
+    private MainTopBarInterface mMainTopBarInterface;
 
     public MainTopBar(Context context) {
         this(context, null);
@@ -33,19 +37,30 @@ public class MainTopBar extends CustomTrakerLayout {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.main_top_bar_layout, this, true);
         bindViews();
+        initViews();
         TrakerLog.i(TrakerLog.getCause()+" activated context+attributes constructor");
-//        ViewGroup.LayoutParams params = mCurrentLevelLayout.getLayoutParams();
-//
-//        params.width = 578/1000;
     }
-
     private void bindViews() {
         mCurrentLevelLayout = findViewById(R.id.main_top_bar_current_level_layout_levels_layout_road_to_next_level);
         mCurrentLevelImage = findViewById(R.id.main_top_bar_current_level_layout_levels_layout_current_level_image);
         mCoinsNumber = findViewById(R.id.main_top_bar_coins_layout_coin_layout_text);
         mFitnessGoal = findViewById(R.id.main_top_bar_layout_goals_layout_goal_layout_text);
         mNotificationsNumber = findViewById(R.id.main_top_bar_layout_notifications_layout_number_image);
+        mNotificationsLayout = findViewById(R.id.main_top_bar_layout_notifications_layout);
         TrakerLog.d(TrakerLog.getCause()+" binded views.");
+    }
+
+    private void initViews() {
+        mNotificationsLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mMainTopBarInterface.onNotificationClicked();
+            }
+        });
+    }
+
+    public void setmMainTopBarInterface(MainTopBarInterface mMainTopBarInterface) {
+        this.mMainTopBarInterface = mMainTopBarInterface;
     }
 
     public void initiate(TrakerUser user) {
@@ -63,6 +78,7 @@ public class MainTopBar extends CustomTrakerLayout {
     }
 
     public interface MainTopBarInterface {
+        void onNotificationClicked();
 
     }
 }

@@ -6,22 +6,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <com.traker.traker.components.TrakerNewsfeedPost
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"></com.traker.traker.components.TrakerNewsfeedPost>
-
-        <com.traker.traker.components.TrakerNewsfeedPost
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"></com.traker.traker.components.TrakerNewsfeedPost>
-
-        <com.traker.traker.components.TrakerNewsfeedPost
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"></com.traker.traker.components.TrakerNewsfeedPost>
+        android:orientation="vertical"
+        android:id="@+id/newsfeed_layout_linear_layout_container">
 
     </LinearLayout>
 </ScrollView>

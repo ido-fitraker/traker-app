@@ -27,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
 //                                          Intent i = new Intent(SplashActivity.this, RegistrationActivity.class);
                                           Intent i = new Intent(SplashActivity.this,
 //                                                  LoginManager.LOGIN_ACTIVITIES[0]);
-                                                  NewsFeedActivity.class);
+                                                  OutsideGymActivity.class);
                                           startActivity(i);
 
                                           finish();

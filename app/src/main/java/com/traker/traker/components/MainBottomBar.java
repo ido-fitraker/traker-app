@@ -46,7 +46,6 @@ public class MainBottomBar extends CustomTrakerLayout {
         LayoutInflater.from(context).inflate(R.layout.main_bottom_bar_layout, this, true);
         bindViews();
         populateBar(BUTTON_IDS);
-
         TrakerLog.i(TrakerLog.getCause()+" activated context+attributes constructor");
 
     }

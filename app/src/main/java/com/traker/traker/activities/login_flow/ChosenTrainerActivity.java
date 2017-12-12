@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.traker.traker.R;
 import com.traker.traker.activities.NewsFeedActivity;
+import com.traker.traker.activities.OutsideGymActivity;
 import com.traker.traker.beans.professionals.PersonalTrainer;
 import com.traker.traker.components.TrakerButton;
 import com.traker.traker.components.VerticalTrakerPersonalTrainerLayout;
@@ -71,7 +72,7 @@ public class ChosenTrainerActivity extends AppCompatActivity {
     }
 
     private void continueToNextScreen() {
-        Intent i = new Intent(this, NewsFeedActivity.class);
+        Intent i = new Intent(this, OutsideGymActivity.class);
         startActivity(i);
         setupPersonalTraining();
 
