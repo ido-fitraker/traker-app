@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.traker.traker.components.TrakerLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/traker_gym_class_layout_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:gravity="center">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/traker_gym_class_layout_instructor_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yoni_geva_the_man_sample_user_image" />
+
+    <com.traker.traker.components.TrakerLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/traker_gym_class_layout_class_information_layout_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13:00"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/traker_gym_class_layout_class_information_layout_instructor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="guy liani"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/traker_gym_class_layout_class_information_layout_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="studio 2"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/traker_gym_class_layout_class_information_layout_subscribers_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="כמות נרשמים:"
+            android:textColor="@color/colorBlack" />
+    </com.traker.traker.components.TrakerLinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/traker_gym_class_layout_signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTraker"
+        android:src="@android:drawable/btn_plus" />
+
+</com.traker.traker.components.TrakerLinearLayout>

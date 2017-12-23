@@ -8,6 +8,7 @@ import com.traker.traker.beans.enums.RelationshipStatus;
  * Created by idoengel on 7/20/17.
  */
 
+
 public class TrakerUser {
     private long id;
     private String fullName;

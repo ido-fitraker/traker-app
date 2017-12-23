@@ -158,32 +158,36 @@
         </com.traker.traker.components.TrakerLinearLayout>
     </com.traker.traker.components.TrakerLinearLayout>
 
-    <!--<com.traker.traker.components.PersonalProfileGoalLayout-->
-        <!--android:id="@+id/personal_profile_layout_current_weight_layout"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
+    <com.traker.traker.components.PersonalProfileGoalLayout
+        android:id="@+id/personal_profile_layout_current_weight_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
-    <!--</com.traker.traker.components.PersonalProfileGoalLayout>-->
+    </com.traker.traker.components.PersonalProfileGoalLayout>
 
-    <!--<com.traker.traker.components.PersonalProfileGoalLayout-->
-        <!--android:id="@+id/personal_profile_layout_current_fat_percentage_layout"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
+    <com.traker.traker.components.PersonalProfileGoalLayout
+        android:id="@+id/personal_profile_layout_current_fat_percentage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
-    <!--</com.traker.traker.components.PersonalProfileGoalLayout>-->
+    </com.traker.traker.components.PersonalProfileGoalLayout>
 
-    <!--<com.traker.traker.components.PersonalProfileGoalLayout-->
-        <!--android:id="@+id/personal_profile_layout_weekly_training_average_layout"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
+    <com.traker.traker.components.PersonalProfileGoalLayout
+        android:id="@+id/personal_profile_layout_weekly_training_average_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
-    <!--</com.traker.traker.components.PersonalProfileGoalLayout>-->
+    </com.traker.traker.components.PersonalProfileGoalLayout>
 
-    <!--<com.traker.traker.components.PersonalProfileGoalLayout-->
-        <!--android:id="@+id/personal_profile_layout_trainings_completed_layout"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
+    <com.traker.traker.components.PersonalProfileGoalLayout
+        android:id="@+id/personal_profile_layout_trainings_completed_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
 
-    <!--</com.traker.traker.components.PersonalProfileGoalLayout>-->
+    </com.traker.traker.components.PersonalProfileGoalLayout>
 
 </LinearLayout>

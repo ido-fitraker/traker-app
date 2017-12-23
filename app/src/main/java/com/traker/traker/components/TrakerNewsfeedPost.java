@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.traker.traker.R;
 import com.traker.traker.beans.TrakerUser;
 import com.traker.traker.beans.enums.TrakerNewsfeedPostEnum;
+import com.traker.traker.beans.models.NewsfeedPostModel;
 import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
@@ -53,6 +54,7 @@ public class TrakerNewsfeedPost extends CustomTrakerLayout {
     private TrakerUser mPublisher;
     private String mText;
     private int mLikesNumber;
+    private NewsfeedPostModel mPostData;
 //    private ArrayList<TrakerNewsfeedPostComment> mComments;
 
     private int mShareNumber;
@@ -79,6 +81,11 @@ public class TrakerNewsfeedPost extends CustomTrakerLayout {
 
     public void setmCommentsSection(TrakerNewsfeedPostCommentSection mCommentsSection) {
         this.mCommentsSection = mCommentsSection;
+    }
+
+    public void setmPostData(NewsfeedPostModel mPostData) {
+        this.mPostData = mPostData;
+        fillPostdetailsFromServer();
     }
 
     public TrakerNewsfeedPostCommentSection getmCommentsSection() {
@@ -113,7 +120,6 @@ public class TrakerNewsfeedPost extends CustomTrakerLayout {
 
     private void initViews() {
         animatePost(CLICKABLE_BUTTONS);
-//        fillPostdetailsFromServer();
         TrakerLog.d(TrakerLog.getCause() + " initiated views for TrakerNewsfeedPost.");
     }
 
@@ -186,7 +192,7 @@ public class TrakerNewsfeedPost extends CustomTrakerLayout {
     private void fillPostdetailsFromServer() {
         // verify this line of code.
         mPostPublisherImage.setImageURI(Uri.parse(mPublisher.getProfileImageURI()));
-        mPostPublisherName.setText(mPublisher.getFullName());
+        mPostPublisherName.setText(mPostData.getPublisher());
         mPostTimestamp.setText(Long.valueOf(mTimestamp).toString()); // need to be concanated with human readable text e.g "xxx *hours ago*"
         mPostContent.setText(mText);
 //        mPostImage.setImageBitmap();

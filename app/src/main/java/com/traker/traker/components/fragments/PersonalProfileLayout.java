@@ -14,6 +14,7 @@ import com.traker.traker.beans.TrakerUser;
 import com.traker.traker.beans.enums.PersonalProfileGoalLayoutEnum;
 import com.traker.traker.components.PersonalProfileGoalLayout;
 
+import com.traker.traker.utils.TrakerApplication;
 import com.traker.traker.utils.TrakerLog;
 
 import java.util.ArrayList;
@@ -24,66 +25,47 @@ import java.util.ArrayList;
 
 public class PersonalProfileLayout extends android.support.v4.app.Fragment {
 
+//    private static View mRootView;
     private TrakerUser mTrakerUser;
     private TextView mUserheight;
     private TextView mUserWeight;
-    private LinearLayout mManagerView;
+    private static LinearLayout mManagerView;
 
     private ArrayList<PersonalProfileGoalLayout> mGoalLayouts = new ArrayList<>();
-//    private static final int[] LAYOUT_IDS = {
-//            R.id.personal_profile_layout_current_weight_layout,
-//            R.id.personal_profile_layout_current_fat_percentage_layout,
-//            R.id.personal_profile_layout_weekly_training_average_layout,
-//            R.id.personal_profile_layout_trainings_completed_layout
-//    };
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        TrakerLog.d(TrakerLog.getCause() + "onAttach PersonalProfilefragment.");
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        TrakerLog.d(TrakerLog.getCause() + "onCreate PersonalProfileFragment.");
-    }
-
-    public PersonalProfileLayout() {
-        super();
-        TrakerLog.d(TrakerLog.getCause() + "went through constructor.");
-    }
+    private static final int[] LAYOUT_IDS = {
+            R.id.personal_profile_layout_current_weight_layout,
+            R.id.personal_profile_layout_current_fat_percentage_layout,
+            R.id.personal_profile_layout_weekly_training_average_layout,
+            R.id.personal_profile_layout_trainings_completed_layout
+    };
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View rootView = null;
-        try {
-            rootView = inflater.inflate(R.layout.personal_profile_layout, container, false);
-        }catch (Exception e){
-            TrakerLog.d(TrakerLog.getCause() + e.toString());
-        }
-        mManagerView = rootView.findViewById(R.id.personal_profile_layout_root_view);
+        mManagerView = (LinearLayout) inflater.inflate(R.layout.personal_profile_layout, container, false);
         TrakerLog.d(TrakerLog.getCause() + "this is mManagerView:"+mManagerView.toString());
-        bindViews(rootView);
+        bindViews();
         initFragment();
         TrakerLog.d(TrakerLog.getCause() + " onCreateView for PersonalProfileLayout.");
-        return rootView;
+        return mManagerView;
     }
 
-    private void bindViews(View rootView) {
-        mUserWeight = rootView.findViewById(R.id.personal_profile_layout_personal_details_layout_content_content_personal_measurements_layout_initial_weight_value);
-        mUserheight = rootView.findViewById(R.id.personal_profile_layout_personal_details_layout_content_content_personal_measurements_layout_height_layout_value);
-        bindGoalsLayouts();
+    private void bindViews() {
+        mUserWeight = mManagerView.findViewById(R.id.personal_profile_layout_personal_details_layout_content_content_personal_measurements_layout_initial_weight_value);
+        mUserheight = mManagerView.findViewById(R.id.personal_profile_layout_personal_details_layout_content_content_personal_measurements_layout_height_layout_value);
+        bindGoalsLayouts(LAYOUT_IDS);
         TrakerLog.d(TrakerLog.getCause() + "binded views.");
     }
 
-    private void bindGoalsLayouts() {
-//        for (int id : LAYOUT_IDS) {
-        for(int i = 0; i < 4; i++){
-        PersonalProfileGoalLayout currentLayout = new PersonalProfileGoalLayout(getContext());
+    /*
+    make changes to fit the same logic as in workout layout binding methods.
+     */
+    private void bindGoalsLayouts(int[] layouts) {
+        for(int i = 0; i < layouts.length; i++){
+        PersonalProfileGoalLayout currentLayout = mManagerView.findViewById(layouts[i]);
+        TrakerLog.d(TrakerLog.getCause() + " my enum: " + currentLayout.toString());
         mGoalLayouts.add(currentLayout);
-        mManagerView.addView(currentLayout);
+//        mManagerView.addView(currentLayout);
         }
         TrakerLog.d(TrakerLog.getCause() + "binded goals layouts.");
     }
@@ -94,8 +76,12 @@ public class PersonalProfileLayout extends android.support.v4.app.Fragment {
 
     private void initGoalsEnumValues() {
         PersonalProfileGoalLayoutEnum[] values = PersonalProfileGoalLayoutEnum.values();
+        TrakerLog.d(TrakerLog.getCause() + " values is: " + values);
+        TrakerLog.d(TrakerLog.getCause() + "mGoalLayouts size is : " + mGoalLayouts.size());
         for(int i = 0; i < mGoalLayouts.size(); i++){
             mGoalLayouts.get(i).setmPersonalProfileGoalLayoutEnum(values[i]);
+            TrakerLog.d(TrakerLog.getCause() + mGoalLayouts.get(i).getmPersonalProfileGoalLayoutEnum().getString());
+            TrakerLog.d(TrakerLog.getCause() + " my enum: " + mGoalLayouts.get(i).toString());
         }
         TrakerLog.d(TrakerLog.getCause() + " initiated goals enum values.");
     }

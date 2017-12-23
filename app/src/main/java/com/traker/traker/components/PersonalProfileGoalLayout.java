@@ -1,6 +1,7 @@
 package com.traker.traker.components;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -15,7 +16,7 @@ import com.traker.traker.utils.TrakerLog;
  * Created by idoroiengel on 12/5/17.
  */
 
-public class PersonalProfileGoalLayout extends CustomTrakerLayout{
+public class PersonalProfileGoalLayout extends CustomTrakerLayout {
 
     // UI
     private ImageView mSpecificGoalImage;
@@ -35,15 +36,8 @@ public class PersonalProfileGoalLayout extends CustomTrakerLayout{
 
     public PersonalProfileGoalLayout(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        try {
-            LayoutInflater.from(context).inflate(R.layout.personal_profile_goal_layout, this, true);
-        }catch (Exception e){
-            TrakerLog.w(TrakerLog.getCause() + e.toString());
-        }finally {
-            TrakerLog.w(TrakerLog.getCause() + "went through inflater.");
-        }
+        LayoutInflater.from(context).inflate(R.layout.personal_profile_goal_layout, this, true);
         bindViews();
-        initViews();
         TrakerLog.d(TrakerLog.getCause() + "activated context+attributes constructor.");
     }
 
@@ -53,6 +47,7 @@ public class PersonalProfileGoalLayout extends CustomTrakerLayout{
 
     public void setmPersonalProfileGoalLayoutEnum(PersonalProfileGoalLayoutEnum mPersonalProfileGoalLayoutEnum) {
         this.mPersonalProfileGoalLayoutEnum = mPersonalProfileGoalLayoutEnum;
+        initViews();
         TrakerLog.d(TrakerLog.getCause() + "activated set method for enum value.");
     }
 
@@ -67,11 +62,22 @@ public class PersonalProfileGoalLayout extends CustomTrakerLayout{
     }
 
     private void initViews() {
-        mSpecificGoalImage.setImageResource(R.drawable.personal_profile_goal_layout_fat_percentage_icon);
-        mGoalName.setText(mPersonalProfileGoalLayoutEnum.getString());
+        mSpecificGoalImage.setImageResource(mPersonalProfileGoalLayoutEnum.getImage());
+        mGoalName.setText(getResources().getString(mPersonalProfileGoalLayoutEnum.getString()));
         TrakerLog.d(TrakerLog.getCause() + "initiated views.");
     }
 
-
-
+    @Override
+    public String toString() {
+        return "PersonalProfileGoalLayout{" +
+                "mSpecificGoalImage=" + mSpecificGoalImage +
+                ", mGoalName=" + mGoalName +
+                ", mGoalValue=" + mGoalValue +
+                ", mGoalIcon=" + mGoalIcon +
+                ", mGoalText=" + mGoalText +
+                ", mGoalTextValue=" + mGoalTextValue +
+                ", mGoalGraphicScale=" + mGoalGraphicScale +
+                ", mPersonalProfileGoalLayoutEnum=" + mPersonalProfileGoalLayoutEnum +
+                '}';
+    }
 }

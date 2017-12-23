@@ -7,4 +7,7 @@ package com.traker.traker.beans.professionals;
 public interface ProfessionalStaffPerson {
 
 
+
+
+
 }

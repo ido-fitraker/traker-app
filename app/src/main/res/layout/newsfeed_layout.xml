@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.traker.traker.components.TrakerLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ListView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/newsfeed_layout_linear_layout_container"
   >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/newsfeed_layout_linear_layout_container">
 
-    </LinearLayout>
-</ScrollView>
+
+</ListView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsfeed_layout_progress_bar"
+        android:theme="@style/Theme.AppCompat.Light"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:visibility="invisible"
+        />
+</com.traker.traker.components.TrakerLinearLayout>

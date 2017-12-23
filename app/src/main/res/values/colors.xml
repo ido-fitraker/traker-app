@@ -8,4 +8,5 @@
     <color name="colorBlack">#000000</color>
     <color name="colorTraker">#FF19FED6</color>
     <color name="outsideGymLayoutBackground">#FF212121</color>
+    <color name="colorGreyBackground">#FF434242</color>
 </resources>

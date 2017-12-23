@@ -48,31 +48,11 @@ public class OutsideGymActivity extends AppCompatActivity {
         fragmentOrganizer = new MainFragmentOrganizer(fragmentManager);
         mOutsideGymLayout.setmOutsideGymLayoutInterface(new OutsideGymLayout.OutsideGymLayoutInterface() {
             @Override
-            public void openPersonalProfileScreen(Fragment fragment) {
-                fragmentOrganizer.openFragment(fragment);
-            }
-
-            @Override
-            public void openNewsfeedScreen(Fragment fragment) {
-//                initMockNewsfeed();
+            public void openFragment(Fragment fragment) {
                 fragmentOrganizer.openFragment(fragment);
             }
         });
         TrakerLog.d(TrakerLog.getCause() + " loaded fragment to screen.");
-    }
-
-    private void initMockNewsfeed() {
-        ArrayList<TrakerNewsfeedPost> mockPostsList = new ArrayList<>();
-        TrakerNewsfeedPost postA = new TrakerNewsfeedPost(this);
-        TrakerNewsfeedPost postB = new TrakerNewsfeedPost(this);
-        TrakerNewsfeedPostCommentSection sectionA = new TrakerNewsfeedPostCommentSection(this);
-        TrakerNewsfeedPostCommentSection sectionB = new TrakerNewsfeedPostCommentSection(this);
-        mockPostsList.add(postA);
-        mockPostsList.add(postB);
-//        mOutsideGymLayout.removeView();
-        mOutsideGymLayout.getmDynamicRow().addView(postA);
-        mOutsideGymLayout.getmDynamicRow().addView(postB);
-        TrakerLog.d(TrakerLog.getCause() + " initiated mock newsfeed.");
     }
 
     @Override

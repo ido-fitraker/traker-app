@@ -3,11 +3,13 @@ package com.traker.traker.utils;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
+import com.traker.traker.beans.models.NewsfeedPostModel;
 import com.traker.traker.components.MainTopBar;
 import com.traker.traker.components.PersonalProfileGoalLayout;
 import com.traker.traker.components.fragments.NewsfeedLayout;
 import com.traker.traker.components.OutsideGymLayout;
 import com.traker.traker.components.fragments.PersonalProfileLayout;
+import com.traker.traker.components.fragments.WorkoutLayout;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -25,7 +27,7 @@ public class MainFragmentOrganizer extends FragmentOrganizer {
     @Override
     protected Fragment getInitialFragment() {
         TrakerLog.d(TrakerLog.getCause()+" got initial fragment.");
-        return NewsfeedLayout.newInstance();
+        return WorkoutLayout.newInstance();
     }
 
     @Subscribe
@@ -45,6 +47,7 @@ public class MainFragmentOrganizer extends FragmentOrganizer {
     @Override
     public void freeUpResources() {
         super.freeUpResources();
+        TrakerLog.d(TrakerLog.getCause() + " freed-up resourcesd.");
     }
 
     @Override

@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.traker.traker.R;
 import com.traker.traker.components.fragments.NewsfeedLayout;
 import com.traker.traker.components.fragments.PersonalProfileLayout;
+import com.traker.traker.components.fragments.WorkoutLayout;
 import com.traker.traker.utils.TrakerLog;
 
 /**
@@ -103,24 +104,27 @@ public class OutsideGymLayout extends TableLayout {
             @Override
             public void onHomeButtonClicked() {
                 Fragment fragment = NewsfeedLayout.newInstance();
-                mOutsideGymLayoutInterface.openNewsfeedScreen(fragment);
-                Toast.makeText(OutsideGymLayout.super.getContext(), "newsfeed fragment", Toast.LENGTH_SHORT).show();
+                mOutsideGymLayoutInterface.openFragment(fragment);
+//                mOutsideGymLayoutInterface.openNewsfeedScreen(fragment);
                 TrakerLog.d(TrakerLog.getCause()+" new instance of NewsfeedLAyout");
             }
 
             @Override
             public void onProfileButtonClicked() {
                 Fragment fragment = PersonalProfileLayout.newInstance();
-                mOutsideGymLayoutInterface.openPersonalProfileScreen(fragment);
+                mOutsideGymLayoutInterface.openFragment(fragment);
+//                mOutsideGymLayoutInterface.openPersonalProfileScreen(fragment);
                 Toast.makeText(OutsideGymLayout.super.getContext(), "profile fragment", Toast.LENGTH_SHORT).show();
                 TrakerLog.d(TrakerLog.getCause()+" new instance of PersonalProfileLayout");
             }
 
             @Override
             public void onWorkoutButtonClicked() {
+                Fragment fragment = WorkoutLayout.newInstance();
+                mOutsideGymLayoutInterface.openFragment(fragment);
+//                mOutsideGymLayoutInterface.openWorkoutScreen(fragment);
                 Toast.makeText(OutsideGymLayout.super.getContext(), "workout fragment", Toast.LENGTH_SHORT).show();
-
-//                WorkoutLayout.newInstance();
+                WorkoutLayout.newInstance();
 //                mOutsideGymLayoutInterface.goToWorkoutScreen();
                 TrakerLog.d(TrakerLog.getCause()+" new instance of WorkoutLayout");
             }
@@ -136,7 +140,6 @@ public class OutsideGymLayout extends TableLayout {
         });
     }
     public interface OutsideGymLayoutInterface {
-        void openPersonalProfileScreen(Fragment fragment);
-        void openNewsfeedScreen(Fragment fragment);
+        void openFragment(Fragment fragment);
     }
 }

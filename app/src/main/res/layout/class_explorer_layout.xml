@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/class_Explorer_layout_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/class_explorer_layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.traker.traker.components.TrakerLinearLayout
+                android:id="@+id/class_explorer_layout_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/class_explorer_layout_title_layout_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="@string/class_explorer_layout_title_text"
+                    android:textColor="@color/colorWhite" />
+
+                <ImageView
+                    android:id="@+id/class_explorer_layout_title_layout_title_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/bottom_bar_workout_button_chosen" />
+            </com.traker.traker.components.TrakerLinearLayout>
+
+            <ImageButton
+                android:id="@+id/class_explorer_layout_title_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/back_screen_button_arrow_icon" />
+        </com.traker.traker.components.TrakerLinearLayout>
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/class_explorer_layout_categories_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/class_explorer_layout_categories_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/class_explorer_layout_category_question" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <com.traker.traker.components.TrakerLinearLayout
+                    android:id="@+id/class_explorer_layout_categories_aerobic_category_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/class_explorer_layout_categories_aerobic_category_layout_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/build_goal_icon" />
+
+                    <TextView
+                        android:id="@+id/class_explorer_layout_categories_aerobic_category_layout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/traker_class_explorer_traker_class_enum_aerobic_text" />
+                </com.traker.traker.components.TrakerLinearLayout>
+
+                <com.traker.traker.components.TrakerLinearLayout
+                    android:id="@+id/class_explorer_layout_categories_body_building_category_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/class_explorer_layout_categories_body_building_category_layout_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/build_goal_icon" />
+
+                    <TextView
+                        android:id="@+id/class_explorer_layout_categories_body_building_category_layout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/traker_class_explorer_traker_class_enum_body_building_text" />
+                </com.traker.traker.components.TrakerLinearLayout>
+
+                <com.traker.traker.components.TrakerLinearLayout
+                    android:id="@+id/class_explorer_layout_categories_stress_relief_category_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/class_explorer_layout_categories_stress_relief_category_layout_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/build_goal_icon" />
+
+                    <TextView
+                        android:id="@+id/class_explorer_layout_categories_stress_relief_category_layout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/traker_class_explorer_traker_class_enum_stress_relief_text" />
+                </com.traker.traker.components.TrakerLinearLayout>
+            </LinearLayout>
+        </com.traker.traker.components.TrakerLinearLayout>
+
+        <com.traker.traker.components.TrakerLinearLayout
+            android:id="@+id/class_explorer_layout_class_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.traker.traker.components.TrakerGymClassLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.traker.traker.components.TrakerGymClassLayout>
+
+            <com.traker.traker.components.TrakerGymClassLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.traker.traker.components.TrakerGymClassLayout>
+        </com.traker.traker.components.TrakerLinearLayout>
+
+    </LinearLayout>
+</ScrollView>

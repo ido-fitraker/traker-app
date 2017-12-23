@@ -11,7 +11,7 @@ import com.traker.traker.components.fragments.NewsfeedLayout;
 import com.traker.traker.components.OutsideGymLayout;
 import com.traker.traker.utils.MainFragmentOrganizer;
 import com.traker.traker.utils.TrakerLog;
-
+@Deprecated
 public class NewsFeedActivity extends AppCompatActivity {
 
     private OutsideGymLayout mOutsideGymLayout;

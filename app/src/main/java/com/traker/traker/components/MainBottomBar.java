@@ -93,8 +93,6 @@ public class MainBottomBar extends CustomTrakerLayout {
         activateSuperListener(button);
         }
 
-
-
     private void updateBarButtons(TrakerImageButton button) {
         for (TrakerImageButton imageButton : mButtonsList) {
             if (imageButton.equals(button)) {

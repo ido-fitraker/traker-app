@@ -11,6 +11,8 @@
                 android:id="@+id/personal_profile_goal_layout_goal_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/personal_profile_goal_layout_progress_scale"
                  />
 
@@ -22,7 +24,7 @@
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/personal_profile_goal_layout_progress_scale"
-                app:layout_constraintEnd_toStartOf="@+id/personal_profile_goal_layout_goal_image"
+                app:layout_constraintStart_toEndOf="@+id/personal_profile_goal_layout_goal_image"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -31,18 +33,18 @@
                 android:layout_height="wrap_content"
                 android:text="75 kg"
                 android:textColor="@color/colorWhite"
-                app:layout_constraintBaseline_toBaselineOf="@+id/personal_profile_goal_layout_goal_name"
-                app:layout_constraintEnd_toStartOf="@+id/personal_profile_goal_layout_goal_name" />
-
-            <ImageView
-                android:id="@+id/personal_profile_goal_layout_goal_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/personal_profile_goal_layout_goal_icon"
-                app:layout_constraintBottom_toTopOf="@+id/personal_profile_goal_layout_progress_scale"
-                app:layout_constraintEnd_toStartOf="@+id/personal_profile_goal_layout_goal_value"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/personal_profile_goal_layout_goal_name"
+                app:layout_constraintStart_toEndOf="@id/personal_profile_goal_layout_goal_name" />
+
+    <ImageView
+        android:id="@+id/personal_profile_goal_layout_goal_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/personal_profile_goal_layout_goal_icon"
+        app:layout_constraintEnd_toStartOf="@+id/personal_profile_goal_layout_goal_text"
+        app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/personal_profile_goal_layout_goal_text"
@@ -51,11 +53,11 @@
                 android:padding="3dp"
                 android:text="@string/personal_profile_goal_layout_goal_text"
                 android:textColor="@color/colorWhite"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/personal_profile_goal_layout_goal_text_value"
+                app:layout_constraintBottom_toTopOf="@id/personal_profile_goal_layout_progress_scale"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/personal_profile_goal_layout_progress_scale"
-                app:layout_constraintEnd_toStartOf="@+id/personal_profile_goal_layout_goal_icon"
-                app:layout_constraintStart_toEndOf="@+id/personal_profile_goal_layout_goal_text_value"
-                app:layout_constraintTop_toTopOf="parent" />
+                tools:layout_editor_absoluteX="17dp" />
 
             <TextView
                 android:id="@+id/personal_profile_goal_layout_goal_text_value"
@@ -63,26 +65,24 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:text="80 kg"
-                android:textColor="@color/colorWhite"
-                app:layout_constraintBottom_toTopOf="@+id/personal_profile_goal_layout_progress_scale"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="22dp" />
+                app:layout_constraintBottom_toTopOf="@id/personal_profile_goal_layout_progress_scale"
+                android:textColor="@color/colorWhite"
+                tools:layout_editor_absoluteX="340dp" />
 
 
-    <ImageView
-        android:id="@+id/personal_profile_goal_layout_progress_scale"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-       />
-
-
+            <ImageView
+                android:id="@+id/personal_profile_goal_layout_progress_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+               />
 
     </android.support.constraint.ConstraintLayout>

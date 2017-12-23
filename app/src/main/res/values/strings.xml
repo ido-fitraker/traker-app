@@ -97,6 +97,20 @@
 
     <!-- newsfeed & co. screen -->
     <string name="newsfeed_post_comments_section_add_comment_text">הוספת תגובה...</string>
+    
+    <!-- workout fragment screen -->
+    <string name="workout_layout_function_buttons_leader_list_text">רשימת \nמובילים</string>
+    <string name="workout_layout_function_buttons_challenges_text">אתגרים</string>
+    <string name="workout_layout_function_buttons_training_session_history_text">היסטוריית \nאימונים</string>
+    <string name="workout_layout_function_buttons_class_explorer_text">סייר \nהחוגים</string>
+    <string name="workout_layout_start_new_training_session_button_Text">התחל אימון חדש</string>
+
+    <!-- class explorer screen -->
+    <string name="traker_class_explorer_traker_class_enum_aerobic_text">אירובי</string>
+    <string name="traker_class_explorer_traker_class_enum_body_building_text">פיתוח הגוף</string>
+    <string name="traker_class_explorer_traker_class_enum_stress_relief_text">הפגת לחצים \nוגמישות</string>
+    <string name="class_explorer_layout_title_text">סייר החוגים</string>
+    <string name="class_explorer_layout_category_question">מה מתחשק לך?</string>
 
 
 </resources>

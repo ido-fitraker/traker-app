@@ -64,7 +64,7 @@ public class LoginManager {
 
     }
     public static TrakerUser getLoggedinUser(){
-        return loggedinUser;
+        return MemoryManager.getInstance().getLoggedinUser();
     }
 
 

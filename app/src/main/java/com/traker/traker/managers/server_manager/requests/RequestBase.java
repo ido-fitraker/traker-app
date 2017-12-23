@@ -24,7 +24,7 @@ public abstract class RequestBase<T> {
     private HashMap<String, Object> parameterMap;
     private int method = Request.Method.GET;
 
-    public RequestBase(Context context,int method, RequestListener<T> requestListener){
+    public RequestBase(Context context, int method, RequestListener<T> requestListener){
         this(context, requestListener);
 
         this.method = method;
@@ -64,6 +64,7 @@ public abstract class RequestBase<T> {
             @Override
             public void onErrorResponse(VolleyError error) {
                 TrakerLog.d(TrakerLog.getCause()+" onError for GsonRequest.");
+                mRequestListener.onFail(error.networkResponse.statusCode, error.getMessage());
 
 
             }
@@ -76,6 +77,7 @@ public abstract class RequestBase<T> {
 
     public interface RequestListener<T> {
         public void onSuccess(T t);
+//        void notModified();
         public void onFail(int resultCode, String message);
     }
 }
