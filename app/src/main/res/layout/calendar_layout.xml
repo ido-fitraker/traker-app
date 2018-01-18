@@ -1,12 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/calendar_layout_root_view">
 
-    <com.traker.traker.components.TrakerCalendarView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+ <LinearLayout
+     android:id="@+id/calendar_layout_calendar_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="16dp"
+     android:layout_marginStart="16dp"
+     android:layout_marginTop="16dp"
+     android:orientation="vertical"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent">
 
-    </com.traker.traker.components.TrakerCalendarView>
+  <com.traker.traker.components.TrakerCalendarView
+      android:id="@+id/calendar_layout_calendar_layout_traker_calendar_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:background="@color/colorWhite">
 
+  </com.traker.traker.components.TrakerCalendarView>
+
+  <TextView
+      android:id="@+id/calendar_layout_calendar_layout_current_chosen_date_text"
+      android:layout_width="368dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:text="current class is this:"
+      android:textColor="@color/colorWhite" />
+ </LinearLayout>
+
+
+ <com.traker.traker.components.TrakerLinearLayout
+     android:id="@+id/calendar_layout_appointments_layout_personal_training_session_layout"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="8dp"
+     android:layout_marginStart="8dp"
+     android:layout_marginTop="8dp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/calendar_layout_calendar_layout">
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/colorTraker"
+      android:clickable="false"
+      android:padding="5dp"
+      android:text="@string/workout_layout_start_new_training_session_button_Text"
+      android:textColor="@color/colorWhite"
+      android:textStyle="bold" />
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/colorWhite"
+      android:clickable="false"
+      android:padding="5dp"
+      android:src="@drawable/workout_layout_new_training_session_icon" />
+ </com.traker.traker.components.TrakerLinearLayout>
+
+ <LinearLayout
+     android:id="@+id/calendar_layout_appointments_layout"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="8dp"
+     android:layout_marginEnd="8dp"
+     android:layout_marginStart="8dp"
+     android:layout_marginTop="8dp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@+id/calendar_layout_appointments_layout_personal_training_session_layout">
+
+  <com.traker.traker.components.TrakerLinearLayout
+      android:id="@+id/calendar_layout_appointments_layout_dietician_appointment_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="16dp"
+      android:layout_marginEnd="56dp"
+      android:gravity="center"
+      android:orientation="vertical">
+
+   <ImageView
+       android:id="@+id/calendar_layout_appointments_layout_dietician_appointment_layout_image"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/build_goal_icon" />
+
+   <TextView
+       android:id="@+id/calendar_layout_appointments_layout_dietician_appointment_layout_text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorWhite"
+       android:text="@string/calendar_layout_dietician_appointement_text" />
+
+  </com.traker.traker.components.TrakerLinearLayout>
+
+  <com.traker.traker.components.TrakerLinearLayout
+      android:id="@+id/calendar_layout_appointments_layout_fitness_consultant_appointment_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="24dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginStart="8dp"
+      android:gravity="center"
+      android:orientation="vertical">
+
+   <ImageView
+       android:id="@+id/calendar_layout_appointments_layout_fitness_consultant_appointment_layout_image"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/build_goal_icon" />
+
+   <TextView
+       android:id="@+id/calendar_layout_appointments_layout_fitness_consultant_appointment_layout_text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/colorWhite"
+       android:text="@string/calendar_layout_fitness_consultant_appointment_text" />
+  </com.traker.traker.components.TrakerLinearLayout>
+ </LinearLayout>
 </android.support.constraint.ConstraintLayout>

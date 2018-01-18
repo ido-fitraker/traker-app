@@ -4,5 +4,14 @@
         <item>זכר</item>
         <item>נקבה</item>
     </string-array>
+    <string-array name="week_days_array">
+        <item>א</item>
+        <item>ב</item>
+        <item>ג</item>
+        <item>ד</item>
+        <item>ה</item>
+        <item>ו</item>
+        <item>ש</item>
+    </string-array>
 
 </resources>

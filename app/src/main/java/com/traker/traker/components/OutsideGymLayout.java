@@ -10,6 +10,7 @@ import android.widget.TableRow;
 import android.widget.Toast;
 
 import com.traker.traker.R;
+import com.traker.traker.components.fragments.CalendarLayout;
 import com.traker.traker.components.fragments.NewsfeedLayout;
 import com.traker.traker.components.fragments.PersonalProfileLayout;
 import com.traker.traker.components.fragments.WorkoutLayout;
@@ -131,10 +132,8 @@ public class OutsideGymLayout extends TableLayout {
 
             @Override
             public void onCalendarButtonClicked() {
-                Toast.makeText(OutsideGymLayout.super.getContext(), "calendar fragment", Toast.LENGTH_SHORT).show();
-
-//                CalendarLayout.newInstance();
-//                mOutsideGymLayoutInterface.goToCalendarScreen();
+                Fragment fragment = CalendarLayout.newInstance();
+                mOutsideGymLayoutInterface.openFragment(fragment);
                 TrakerLog.d(TrakerLog.getCause()+" new instance of CalendarLayout");
             }
         });

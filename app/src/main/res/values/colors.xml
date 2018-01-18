@@ -9,4 +9,6 @@
     <color name="colorTraker">#FF19FED6</color>
     <color name="outsideGymLayoutBackground">#FF212121</color>
     <color name="colorGreyBackground">#FF434242</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorPurple">#FFC18BE4</color>
 </resources>

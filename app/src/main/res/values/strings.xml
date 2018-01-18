@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Traker</string>
+    <string name="app_name">PowerApp</string>
     <string name="ok_button">OK</string>
     <string name="zero_number">0</string>
 
@@ -112,5 +112,8 @@
     <string name="class_explorer_layout_title_text">סייר החוגים</string>
     <string name="class_explorer_layout_category_question">מה מתחשק לך?</string>
 
+    <!-- calendar layout fragment screen -->
+    <string name="calendar_layout_fitness_consultant_appointment_text">קבע פגישה \nעם יועץ כושר</string>
+    <string name="calendar_layout_dietician_appointement_text">קבע פגישה \nעם תזונאי</string>
 
 </resources>
