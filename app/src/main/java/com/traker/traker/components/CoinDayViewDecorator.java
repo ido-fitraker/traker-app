@@ -8,6 +8,7 @@ import com.prolificinteractive.materialcalendarview.DayViewFacade;
 import com.traker.traker.R;
 import com.traker.traker.managers.LoginManager;
 import com.traker.traker.utils.TrakerApplication;
+import com.traker.traker.utils.TrakerLog;
 
 import java.util.HashSet;
 
@@ -25,16 +26,19 @@ public class CoinDayViewDecorator implements DayViewDecorator {
         coinDrawable = TrakerApplication.getContext().getResources().getDrawable(COIN_IMAGE);
         dates = new HashSet<>();
 //        dates = LoginManager.getLoggedinUser().getChallengesCompleted();
+        TrakerLog.d(TrakerLog.getCause() + " initiated CoinDayViewDecorator.");
     }
 
     @Override
     public boolean shouldDecorate(CalendarDay day) {
 //        return dates.contains(day);
+//        TrakerLog.d(TrakerLog.getCause() + " checked shouldDecorate.");
         return false;
     }
 
     @Override
     public void decorate(DayViewFacade view) {
         view.setBackgroundDrawable(coinDrawable);
+        TrakerLog.d(TrakerLog.getCause() + " activated decoration.");
     }
 }

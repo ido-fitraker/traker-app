@@ -1,8 +1,5 @@
 package com.traker.traker.utils;
 
-
-import com.prolificinteractive.materialcalendarview.DayViewDecorator;
-import com.prolificinteractive.materialcalendarview.DayViewFacade;
 import com.traker.traker.components.ClassDayViewDecorator;
 import com.traker.traker.components.CoinDayViewDecorator;
 
@@ -19,6 +16,7 @@ public class EventDecorator{
     public EventDecorator() {
         classDecorator = new ClassDayViewDecorator();
         coinDecorator = new CoinDayViewDecorator();
+        TrakerLog.d(TrakerLog.getCause() + " initiated two decorators.");
     }
 
     public ClassDayViewDecorator getClassDecorator() {

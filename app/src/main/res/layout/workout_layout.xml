@@ -32,13 +32,13 @@
                 android:id="@+id/wokrout_layout_muscles_group_layout_a_group_letter_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/coach_image_on" />
+                android:src="@drawable/front_hand_image" />
 
             <ImageView
                 android:id="@+id/workout_layout_muscles_group_layout_a_group_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/coach_image_on" />
+                android:src="@drawable/chest_image" />
         </com.traker.traker.components.TrakerLinearLayout>
 
         <com.traker.traker.components.TrakerLinearLayout
@@ -53,13 +53,13 @@
                 android:id="@+id/wokrout_layout_muscles_group_layout_b_group_letter_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/coach_image_on" />
+                android:src="@drawable/back_hand_image" />
 
             <ImageView
                 android:id="@+id/workout_layout_muscles_group_layout_b_group_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/coach_image_on" />
+                android:src="@drawable/back_image" />
         </com.traker.traker.components.TrakerLinearLayout>
 
         <com.traker.traker.components.TrakerLinearLayout
@@ -74,13 +74,13 @@
                 android:id="@+id/wokrout_layout_muscles_group_layout_c_group_letter_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/coach_image_on" />
+                android:src="@drawable/shoulders_image" />
 
             <ImageView
                 android:id="@+id/workout_layout_muscles_group_layout_c_group_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/coach_image_on" />
+                android:src="@drawable/feet_image" />
         </com.traker.traker.components.TrakerLinearLayout>
     </LinearLayout>
 
@@ -92,7 +92,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/colorTraker"
         android:clickable="true"
         android:gravity="center"
         android:padding="10dp"
@@ -111,19 +110,22 @@
             android:textColor="@color/colorBlack"
             android:textStyle="bold" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
             android:clickable="false"
             android:padding="5dp"
-            android:src="@drawable/workout_layout_new_training_session_icon" />
+            android:src="@drawable/workout_layout_new_training_session_icon"
+            app:civ_border_color="@color/colorTraker"
+            app:civ_border_overlay="false"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/colorWhite" />
     </com.traker.traker.components.TrakerLinearLayout>
 
     <com.traker.traker.components.WorkoutFunctionButtonLayout
         android:id="@+id/workout_layout_workout_function_buttons_layout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"

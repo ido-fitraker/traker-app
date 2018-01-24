@@ -21,7 +21,7 @@ import com.traker.traker.utils.TrakerLog;
 public class MainTopBar extends CustomTrakerLayout {
 
     private TextView mCurrentLevelLayout;
-    private ImageView mCurrentLevelImage;
+    private TrakerLevelStar mCurrentLevelImage;
     private TextView mCoinsNumber;
     private TextView mFitnessGoal;
     private ImageView mNotificationsNumber;
@@ -57,6 +57,8 @@ public class MainTopBar extends CustomTrakerLayout {
                 mMainTopBarInterface.onNotificationClicked();
             }
         });
+        initiate(new TrakerUser());
+        TrakerLog.d(TrakerLog.getCause() + " initiated views.");
     }
 
     public void setmMainTopBarInterface(MainTopBarInterface mMainTopBarInterface) {
@@ -70,7 +72,8 @@ public class MainTopBar extends CustomTrakerLayout {
 
 //        mCoinsNumber.setText(user.getCoins());
         mCoinsNumber.setText("15");
-
+//        mCurrentLevelImage.setmLevel(user.getLevel());
+        mCurrentLevelImage.setmLevel(7);
 //        mFitnessGoal.setText(user.getFitnessGoal().toString());
         mFitnessGoal.setText(FitnessGoal.BUILD_MUSCLES_GOAL.getName());
         // take notifications number from user.

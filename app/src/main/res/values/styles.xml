@@ -19,7 +19,8 @@
         <item name="android:weekNumberColor">@color/colorRed</item>
     </style>
 
-    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
-        <item name="android:textColor">@color/colorGreyBackground</item>
+    <style name="CalendarViewCustomWeekLabel">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
     </style>
 </resources>

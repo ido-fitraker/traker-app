@@ -9,7 +9,7 @@
 
  <LinearLayout
      android:id="@+id/calendar_layout_calendar_layout"
-     android:layout_width="match_parent"
+     android:layout_width="0dp"
      android:layout_height="wrap_content"
      android:layout_marginEnd="16dp"
      android:layout_marginStart="16dp"
@@ -21,12 +21,12 @@
 
   <com.traker.traker.components.TrakerCalendarView
       android:id="@+id/calendar_layout_calendar_layout_traker_calendar_view"
-      android:layout_width="match_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginEnd="8dp"
       android:layout_marginStart="8dp"
       android:layout_marginTop="8dp"
-      android:background="@color/colorWhite">
+      android:background="@drawable/calendar_rounded_frame">
 
   </com.traker.traker.components.TrakerCalendarView>
 
@@ -43,33 +43,38 @@
 
 
  <com.traker.traker.components.TrakerLinearLayout
-     android:id="@+id/calendar_layout_appointments_layout_personal_training_session_layout"
+     android:id="@+id/calendar_layout_appointments_layout_personal_training_session_layout_new_training_session_layout"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:layout_marginEnd="8dp"
      android:layout_marginStart="8dp"
      android:layout_marginTop="8dp"
+     android:gravity="center_vertical"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
      app:layout_constraintTop_toBottomOf="@+id/calendar_layout_calendar_layout">
 
   <TextView
+      android:id="@+id/calendar_layout_appointments_layout_personal_training_session_layout_new_training_session_text"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:background="@color/colorTraker"
       android:clickable="false"
       android:padding="5dp"
       android:text="@string/workout_layout_start_new_training_session_button_Text"
-      android:textColor="@color/colorWhite"
+      android:textColor="@color/colorBlack"
       android:textStyle="bold" />
 
-  <ImageView
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/calendar_layout_appointments_layout_personal_training_session_layout_new_training_session_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:background="@color/colorWhite"
       android:clickable="false"
-      android:padding="5dp"
-      android:src="@drawable/workout_layout_new_training_session_icon" />
+      android:src="@drawable/new_personal_training_session_registration"
+      app:civ_border_color="@color/colorTraker"
+      app:civ_border_overlay="false"
+      app:civ_border_width="3dp"
+      app:civ_fill_color="@color/colorWhite" />
  </com.traker.traker.components.TrakerLinearLayout>
 
  <LinearLayout
@@ -83,7 +88,7 @@
      app:layout_constraintBottom_toBottomOf="parent"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
-     app:layout_constraintTop_toBottomOf="@+id/calendar_layout_appointments_layout_personal_training_session_layout">
+   >
 
   <com.traker.traker.components.TrakerLinearLayout
       android:id="@+id/calendar_layout_appointments_layout_dietician_appointment_layout"
@@ -94,18 +99,23 @@
       android:gravity="center"
       android:orientation="vertical">
 
-   <ImageView
+   <de.hdodenhof.circleimageview.CircleImageView
        android:id="@+id/calendar_layout_appointments_layout_dietician_appointment_layout_image"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:src="@drawable/build_goal_icon" />
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:adjustViewBounds="false"
+       android:cropToPadding="false"
+       android:src="@drawable/build_goal_icon"
+       app:civ_border_color="@color/colorTraker"
+       app:civ_border_overlay="false"
+       app:civ_border_width="1dp" />
 
    <TextView
        android:id="@+id/calendar_layout_appointments_layout_dietician_appointment_layout_text"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:textColor="@color/colorWhite"
-       android:text="@string/calendar_layout_dietician_appointement_text" />
+       android:text="@string/calendar_layout_dietician_appointement_text"
+       android:textColor="@color/colorWhite" />
 
   </com.traker.traker.components.TrakerLinearLayout>
 
@@ -119,18 +129,21 @@
       android:gravity="center"
       android:orientation="vertical">
 
-   <ImageView
+   <de.hdodenhof.circleimageview.CircleImageView
        android:id="@+id/calendar_layout_appointments_layout_fitness_consultant_appointment_layout_image"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:src="@drawable/build_goal_icon" />
+       android:src="@drawable/build_goal_icon"
+       app:civ_border_color="@color/colorTraker"
+       app:civ_border_overlay="false"
+       app:civ_border_width="1dp" />
 
    <TextView
        android:id="@+id/calendar_layout_appointments_layout_fitness_consultant_appointment_layout_text"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:textColor="@color/colorWhite"
-       android:text="@string/calendar_layout_fitness_consultant_appointment_text" />
+       android:text="@string/calendar_layout_fitness_consultant_appointment_text"
+       android:textColor="@color/colorWhite" />
   </com.traker.traker.components.TrakerLinearLayout>
  </LinearLayout>
 </android.support.constraint.ConstraintLayout>

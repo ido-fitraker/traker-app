@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/traker_level_star_root_view">
+
+    <com.traker.traker.components.TrakerImageView
+        android:id="@+id/traker_level_star_image_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal|center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/top_bar_star_no_number" />
+
+    <com.traker.traker.components.TrakerTextView
+        android:id="@+id/traker_level_star_level_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="@color/colorBlack" />
+</FrameLayout>

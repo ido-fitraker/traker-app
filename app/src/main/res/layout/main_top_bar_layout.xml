@@ -40,7 +40,7 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp" />
 
-            <ImageView
+            <com.traker.traker.components.TrakerLevelStar
                 android:id="@+id/main_top_bar_current_level_layout_levels_layout_current_level_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,8 +86,7 @@
                 android:id="@+id/main_top_bar_coins_layout_coin_layout_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/top_bar_coin_image"
-                 />
+                android:src="@drawable/top_bar_coin_image" />
         </LinearLayout>
 
     </LinearLayout>
@@ -155,7 +154,7 @@
             android:id="@+id/main_top_bar_layout_notifications_layout_number_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="false"/>
+            android:clickable="false" />
     </LinearLayout>
 
 </LinearLayout>

@@ -23,7 +23,7 @@ public class TrakerUser {
     private int systemRating;
     private long goalsId;
     private int points;
-    private long level;
+    private int level;
     private long coachId;
     private long typeId;
     private int age;
@@ -38,7 +38,7 @@ public class TrakerUser {
 
     public TrakerUser(long id, String fullName, long phone, String profileImageURI, String email, String gender,
                       long birthday, long facebookId, long tokenId, int socialRating, int systemRating, long goalsId,
-                      int points, long level, long coachId, long typeId, int age, RelationshipStatus status, int coins) {
+                      int points, int level, long coachId, long typeId, int age, RelationshipStatus status, int coins) {
         this.id = id;
         this.fullName = fullName;
         this.phone = phone;
@@ -180,11 +180,11 @@ public class TrakerUser {
         this.points = points;
     }
 
-    public long getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public void setLevel(long level) {
+    public void setLevel(int level) {
         this.level = level;
     }
 
